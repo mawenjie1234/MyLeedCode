@@ -3,6 +3,30 @@
   <component name="LeetcodeEditor">
     <option name="projectConfig">
       <map>
+        <entry key="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[11]盛最多水的容器.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[11]盛最多水的容器.java" />
+              <option name="questionId" value="11" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[283]移动零.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[283]移动零.java" />
+              <option name="questionId" value="283" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[70]爬楼梯.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[70]爬楼梯.java" />
+              <option name="questionId" value="70" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="/var/folders/jl/sfd7r7_91t9gw43q8yqs8zj00000gn/T/leetcode/editor/cn/[11]盛最多水的容器.java">
           <value>
             <LeetcodeEditor>

@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.leetcode.editor.cn.MoveZeroSolution283;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -8,6 +10,11 @@ public class Main {
 //        int maxArea = maxArea(a);
 //        System.out.println(maxArea);
 //        climbStairs(4);
+
+        // 283 zero move
+        MoveZeroSolution283 moveZeroSolution283 = new MoveZeroSolution283();
+        int []nums = new int[] {0,1,0,3,12};
+        moveZeroSolution283.moveZeroes(nums);
     }
 
     public static int maxArea(int[] height) {

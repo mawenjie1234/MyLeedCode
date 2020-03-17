@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5086bd4f-c4d2-4403-baa6-d0630ce868ea" name="Default Changelist" comment="" />
+    <list default="true" id="5086bd4f-c4d2-4403-baa6-d0630ce868ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +15,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1YyZwXG2jSxphD1tnLtLcprKD5Q" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -50,7 +55,9 @@
       <updated>1583917034438</updated>
       <workItem from="1583917040765" duration="105000" />
       <workItem from="1583917164245" duration="6652000" />
-      <workItem from="1583979591999" duration="1242000" />
+      <workItem from="1583979591999" duration="3693000" />
+      <workItem from="1584091865733" duration="1310000" />
+      <workItem from="1584406801384" duration="1038000" />
     </task>
     <servers />
   </component>
@@ -94,21 +101,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="285" key="GridCell.Tab.1.right/0.23.1440.877/-256.-1057.1920.1057@0.23.1440.877" timestamp="1583931373657" />
-    <state x="81" y="42" width="1250" height="803" key="SettingsEditor" timestamp="1583980467746">
+    <state x="81" y="42" width="1250" height="803" key="SettingsEditor" timestamp="1583981555632">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="81" y="42" width="1250" height="803" key="SettingsEditor/0.23.1440.877/-256.-1057.1920.1057@0.23.1440.877" timestamp="1583980467746" />
-    <state x="397" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1583979598969">
+    <state x="81" y="42" width="1250" height="803" key="SettingsEditor/0.23.1440.877/-256.-1057.1920.1057@0.23.1440.877" timestamp="1583981555632" />
+    <state x="397" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1584406836247">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="397" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877/-256.-1057.1920.1057@0.23.1440.877" timestamp="1583979598969" />
+    <state x="397" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877/-256.-1057.1920.1057@0.23.1440.877" timestamp="1584406836247" />
+    <state x="397" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1584092011621" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
-          <line>31</line>
+          <line>38</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
