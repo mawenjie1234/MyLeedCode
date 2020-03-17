@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5086bd4f-c4d2-4403-baa6-d0630ce868ea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[1]两数之和.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[1]两数之和.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,13 +16,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1YyZwXG2jSxphD1tnLtLcprKD5Q" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="leetcode.id" />
@@ -57,12 +61,16 @@
       <workItem from="1583917164245" duration="6652000" />
       <workItem from="1583979591999" duration="3693000" />
       <workItem from="1584091865733" duration="1310000" />
-      <workItem from="1584406801384" duration="1038000" />
+      <workItem from="1584406801384" duration="1671000" />
+      <workItem from="1584426052151" duration="2122000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="483" y="172" key="#xdebugger.evaluate" timestamp="1583928514060">
@@ -105,10 +113,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="81" y="42" width="1250" height="803" key="SettingsEditor/0.23.1440.877/-256.-1057.1920.1057@0.23.1440.877" timestamp="1583981555632" />
-    <state x="397" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1584406836247">
+    <state x="397" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1584426071364">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="397" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877/-256.-1057.1920.1057@0.23.1440.877" timestamp="1584406836247" />
+    <state x="397" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877/-256.-1057.1920.1057@0.23.1440.877" timestamp="1584426071364" />
     <state x="397" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1584092011621" />
   </component>
   <component name="XDebuggerManager">
