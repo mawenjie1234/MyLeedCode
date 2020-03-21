@@ -36,42 +36,84 @@ import java.util.List;
 
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
-        List<List<Integer>> res = new ArrayList<>();
-        int len = nums.length;
-        if(nums.length < 3) {
-            return res;
-        }
-        Arrays.sort(nums);
-        if (nums[0] > 0 || nums[len - 1] < 0) {
-            return res;
-        }
-        // 此处i<len 跑分24 和 i < len - 2 跑分31
-        for (int i = 0; i < len; i++) {
-            if(nums[i] > 0) {// 已经拍好序列的，如果当前已经大于0了。后面的一定大于0
-                break;
-            }
-            if (i > 0 && nums[i] == nums[i - 1]) {// 当前值上一个值已经算过了。
-                continue;
-            }
-            int first = i + 1;
-            int last = len - 1;
-            while (first < last) {
-                int sum = nums[first] + nums[last] + nums[i];
-                if (sum == 0) {
-                    res.add(Arrays.asList(nums[i], nums[first], nums[last]));
-                    while (first < last && nums[first] == nums[first + 1]) first ++;
-                    while (first < last && nums[last] == nums[last - 1]) last --;
-                    first++;
-                    last--;
-                } else if (sum < 0) {
-                    first++;
-                } else {
-                    last--;
-                }
-            }
-        }
-        return res;
+
     }
+
+//    public List<List<Integer>> threeSum(int[] nums) {
+//        List<List<Integer>> res = new ArrayList<>();
+//        int len = nums.length;
+//        if (len < 3) {
+//            return res;
+//        }
+//        Arrays.sort(nums);
+//        if (nums[0] > 0 || nums[len - 1] < 0) {
+//            return res;
+//        }
+//
+//        for (int i = 0; i < len; i++) {
+//            if (nums[i] > 0) {
+//                break;
+//            }
+//            if (i > 0 && nums[i] == nums[i - 1]) {
+//                continue;
+//            }
+//            int first = i + 1;
+//            int last = len - 1;
+//            while (first < last) {
+//                int sum = nums[i] + nums[first] + nums[last];
+//                if (sum == 0) {
+//                    res.add(Arrays.asList(nums[i], nums[first], nums[last]));
+//                    while (first < last && nums[first] == nums[first + 1]) first++;
+//                    while (first < last && nums[last] == nums[last - 1]) last--;
+//                    first++;
+//                    last--;
+//                } else if (sum > 0) {
+//                    last--;
+//                } else {
+//                    first++;
+//                }
+//            }
+//        }
+//        return res;
+//    }
+
+//        public List<List<Integer>> threeSum(int[] nums) {
+//        List<List<Integer>> res = new ArrayList<>();
+//        int len = nums.length;
+//        if(nums.length < 3) {
+//            return res;
+//        }
+//        Arrays.sort(nums);
+//        if (nums[0] > 0 || nums[len - 1] < 0) {
+//            return res;
+//        }
+//        // 此处i<len 跑分24 和 i < len - 2 跑分31
+//        for (int i = 0; i < len; i++) {
+//            if(nums[i] > 0) {// 已经拍好序列的，如果当前已经大于0了。后面的一定大于0
+//                break;
+//            }
+//            if (i > 0 && nums[i] == nums[i - 1]) {// 当前值上一个值已经算过了。
+//                continue;
+//            }
+//            int first = i + 1;
+//            int last = len - 1;
+//            while (first < last) {
+//                int sum = nums[first] + nums[last] + nums[i];
+//                if (sum == 0) {
+//                    res.add(Arrays.asList(nums[i], nums[first], nums[last]));
+//                    while (first < last && nums[first] == nums[first + 1]) first ++;
+//                    while (first < last && nums[last] == nums[last - 1]) last --;
+//                    first++;
+//                    last--;
+//                } else if (sum < 0) {
+//                    first++;
+//                } else {
+//                    last--;
+//                }
+//            }
+//        }
+//        return res;
+//    }
 }
 
 // List<List<Integer>> ans = new ArrayList();
