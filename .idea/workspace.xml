@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5086bd4f-c4d2-4403-baa6-d0630ce868ea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[142]环形链表 II.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[142]环形链表 II.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[15]三数之和.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[15]三数之和.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/all.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/translation.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +69,10 @@
       <workItem from="1584756480544" duration="50000" />
       <workItem from="1584756532983" duration="250000" />
       <workItem from="1584756941950" duration="2108000" />
+      <workItem from="1584935075702" duration="7048000" />
+      <workItem from="1585186014172" duration="639000" />
+      <workItem from="1585720037567" duration="87000" />
+      <workItem from="1585721940257" duration="2129000" />
     </task>
     <servers />
   </component>
@@ -116,22 +124,12 @@
     </state>
     <state x="81" y="42" width="1250" height="803" key="SettingsEditor/0.23.1440.877/-256.-1057.1920.1057@0.23.1440.877" timestamp="1583981555632" />
     <state x="876" y="327" width="1276" height="722" key="SettingsEditor/2560.23.1440.2537/0.23.2560.1417@0.23.2560.1417" timestamp="1584759315492" />
-    <state x="706" y="461" key="com.intellij.ide.util.TipDialog" timestamp="1584757387139">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state x="283" y="183" width="910" height="593" key="com.intellij.ide.util.TipDialog" timestamp="1585721940961">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="397" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877/-256.-1057.1920.1057@0.23.1440.877" timestamp="1584426071364" />
+    <state x="283" y="183" width="910" height="593" key="com.intellij.ide.util.TipDialog/0.23.1440.877/-256.-1057.1920.1057@0.23.1440.877" timestamp="1584935195405" />
+    <state x="283" y="183" key="com.intellij.ide.util.TipDialog/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1585721940961" />
     <state x="397" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1584092011621" />
     <state x="706" y="461" key="com.intellij.ide.util.TipDialog/2560.23.1440.2537/0.23.2560.1417@0.23.2560.1417" timestamp="1584757387139" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
