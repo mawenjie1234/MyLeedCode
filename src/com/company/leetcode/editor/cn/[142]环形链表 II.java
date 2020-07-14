@@ -1,3 +1,4 @@
+//package com.company.leetcode.editor.cn;
 ////给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
 ////
 //// 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。
@@ -57,37 +58,48 @@
 // */
 //public class Solution {
 //
-////    class ListNode {
-////        int val;
-////        ListNode next;
-////
-////        ListNode(int x) {
-////            val = x;
-////            next = null;
-////        }
-////    }
+//    class ListNode {
+//        int val;
+//        ListNode next;
+//
+//        ListNode(int x) {
+//            val = x;
+//            next = null;
+//        }
+//    }
 //
 //        public ListNode detectCycle(ListNode head) {
 //
-//            if(head == null || head.next == null) {
-//                return null;
-//            }
-//            ListNode first = head;
-//            ListNode slow = head;
-//            ListNode fast = head.next;
-//            while (slow != fast) {
-//                if(fast == null || fast.next == null) {
-//                    return null;
-//                }
-//                fast = fast.next.next;
-//                slow = slow.next;
-//            }
-//            // slow == fast 已经判断有环了
-//            while (first != slow) {
-//                first = first.next;
-//                slow = slow.next;
-//            }
-//            return head;
 //        }
+//
+//
+//
+//
+//
+//
+//
+////
+////        public ListNode detectCycle(ListNode head) {
+////
+////            if(head == null || head.next == null) {
+////                return null;
+////            }
+////            ListNode first = head;
+////            ListNode slow = head;
+////            ListNode fast = head.next;
+////            while (slow != fast) {
+////                if(fast == null || fast.next == null) {
+////                    return null;
+////                }
+////                fast = fast.next.next;
+////                slow = slow.next;
+////            }
+////            // slow == fast 已经判断有环了
+////            while (first != slow) {
+////                first = first.next;
+////                slow = slow.next;
+////            }
+////            return head;
+////        }
 //    }
 ////leetcode submit region end(Prohibit modification and deletion)

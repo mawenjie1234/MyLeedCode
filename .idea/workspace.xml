@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5086bd4f-c4d2-4403-baa6-d0630ce868ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[239]滑动窗口最大值.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[25]K 个一组翻转链表.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[25]K 个一组翻转链表.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/doc/hua-dong-chuang-kou-zui-da-zhi-by-leetcode-3.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/doc/p__log_k__.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/doc/p__{O}_N_log_k___.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[11]盛最多水的容器.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[11]盛最多水的容器.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[141]环形链表.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[141]环形链表.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[142]环形链表 II.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[142]环形链表 II.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[15]三数之和.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[15]三数之和.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[1]两数之和.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[1]两数之和.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[206]反转链表.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[206]反转链表.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[24]两两交换链表中的节点.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[24]两两交换链表中的节点.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[283]移动零.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[283]移动零.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[70]爬楼梯.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[70]爬楼梯.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/all.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/en/[24]Swap Nodes in Pairs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/en/[24]Swap Nodes in Pairs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +88,7 @@
       <workItem from="1591582595810" duration="1043000" />
       <workItem from="1593307942406" duration="2113000" />
       <workItem from="1594687591582" duration="3684000" />
+      <workItem from="1594735417300" duration="1086000" />
     </task>
     <servers />
   </component>
@@ -168,8 +150,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[24]两两交换链表中的节点.java</url>
-          <line>45</line>
+          <line>47</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[141]环形链表.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
