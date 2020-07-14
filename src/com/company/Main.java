@@ -1,6 +1,5 @@
 package com.company;
 
-import com.company.leetcode.editor.cn.MoveZeroSolution283;
 
 public class Main {
 
@@ -12,9 +11,22 @@ public class Main {
 //        climbStairs(4);
 
         // 283 zero move
-        MoveZeroSolution283 moveZeroSolution283 = new MoveZeroSolution283();
-        int []nums = new int[] {0,1,0,3,12};
-        moveZeroSolution283.moveZeroes(nums);
+//        MoveZeroSolution283 moveZeroSolution283 = new MoveZeroSolution283();
+//        int []nums = new int[] {0,1,0,3,12};
+//        moveZeroSolution283.moveZeroes(nums);
+
+        float everyYearMoney = 25000;
+        float totalMoney = everyYearMoney;
+        float ratio = 0.1f;
+        for (int i = 0; i < 10; i++) {
+            totalMoney = calculate(totalMoney, ratio);
+            totalMoney += everyYearMoney;
+        }
+        System.out.println(totalMoney);
+    }
+
+    private static float calculate(float memory, float ratio) {
+        return memory * (1 + ratio);
     }
 
     public static int maxArea(int[] height) {
