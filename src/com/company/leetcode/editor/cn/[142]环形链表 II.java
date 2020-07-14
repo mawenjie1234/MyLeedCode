@@ -58,19 +58,48 @@
 // */
 //public class Solution {
 //
-//    class ListNode {
-//        int val;
-//        ListNode next;
+////    class ListNode {
+////        int val;
+////        ListNode next;
+////
+////        ListNode(int x) {
+////            val = x;
+////            next = null;
+////        }
+////    }
 //
-//        ListNode(int x) {
-//            val = x;
-//            next = null;
-//        }
-//    }
-//
-//        public ListNode detectCycle(ListNode head) {
-//
-//        }
+////        public ListNode detectCycle(ListNode head) {
+////            if(head == null) {
+////                return null;
+////            }
+////            ListNode meetNode = meetNote(head);
+////            // no circle
+////            if(meetNode == null) {
+////                return null;
+////            }
+////
+////            while (head != meetNode) {
+////                head = head.next;
+////                meetNode = meetNode.next;
+////            }
+////            return head;
+////        }
+////
+////        private ListNode meetNote(ListNode head) {
+////            if(head == null) {
+////                return null;
+////            }
+////            ListNode slow = head;
+////            ListNode fast = head.next;
+////            while (slow != fast) {
+////                if(fast == null || fast.next == null) {
+////                    return null;
+////                }
+////                slow = slow.next;
+////                fast = fast.next.next;
+////            }
+////            return slow;
+////        }
 //
 //
 //
