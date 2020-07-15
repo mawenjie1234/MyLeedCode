@@ -1,4 +1,4 @@
-////给你一个链表，每 k 个节点一组进行翻转，请你返回翻转后的链表。
+//package com.company.leetcode.editor.cn;//给你一个链表，每 k 个节点一组进行翻转，请你返回翻转后的链表。
 ////
 //// k 是一个正整数，它的值小于或等于链表的长度。
 ////
@@ -38,17 +38,103 @@
 // * }
 // */
 //class Solution {
-//    public class ListNode {
-//        int val;
-//        ListNode next;
 //
-//        ListNode(int x) {
-//            val = x;
-//        }
-//    }
+////    public static void main(String[] args) {
+////        ListNode last = null;
+////        ListNode head = null;
+////        int createCount = 10;
+////        for (int i = 0; i < createCount; i++) {
+////            last = Create(i, last);
+////            if (createCount == i + 1) {
+////                head = last;
+////            }
+////        }
+////        printListNode(head);
+////
+////        Solution solution = new Solution();
+////        ListNode k = solution.reverseKGroup(head, 4);
+////
+////        System.out.println("reverse finished");
+////        printListNode(k);
+////    }
+////
+////    private static void printListNode(ListNode head) {
+////        while (head != null) {
+////            System.out.print(head.val);
+////            head = head.next;
+////            if (head != null) {
+////                System.out.print("->");
+////            } else {
+////                System.out.println();
+////            }
+////        }
+////    }
+////
+////    private static ListNode Create(int value, ListNode next) {
+////        return new ListNode(value, next);
+////    }
+////
+////    public static class ListNode {
+////        int val;
+////        ListNode next;
+////
+////        ListNode(int x, ListNode next) {
+////            val = x;
+////            this.next = next;
+////        }
+////    }
+//
 //
 //    public ListNode reverseKGroup(ListNode head, int k) {
+//        if(k == 1) {
+//            return head;
+//        }
+//        int count = 1;
+//        ListNode iterator = head;
+//        ListNode reverseFinishedHeader = null;
+//        ListNode start = head;
+//        ListNode pre = null;
+//        while (iterator != null && iterator.next != null) {
+//            iterator = iterator.next;
+//            count++;
+//            if (count == k) {
+//                count = 0;
+//                ListNode end = iterator;
+//                reverse(start, k);
+//                // end 在前，start 在后
+//                if(pre != null) {
+//                    pre.next = end;
+//                }
+//                pre = start;
+//                System.out.println("pre " + pre.val);
+//                if(reverseFinishedHeader == null) {
+//                    reverseFinishedHeader = end;
+//                }
+//                iterator = start;
+//                start = start.next;
 //
+//                //printListNode(reverseFinishedHeader);
+//            }
+//        }
+//        return reverseFinishedHeader;
+//    }
+//
+//    private void reverse(ListNode head, int count) {
+//        if (head == null) {
+//            return;
+//        }
+//        int reverseCount = 1;
+//        ListNode first = head;
+//        ListNode next = null;
+//        while (reverseCount < count && head.next != null) {
+//            reverseCount++;
+//            next = head.next;
+//            ListNode thread = next.next;
+//            head.next = thread;
+//            next.next = first;
+//            first = next;
+//            //printListNode(head);
+//        }
 //    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)
