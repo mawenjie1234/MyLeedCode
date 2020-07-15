@@ -85,6 +85,8 @@
 ////    }
 //
 //
+//    // 1
+//
 //    public ListNode reverseKGroup(ListNode head, int k) {
 //        if(k == 1) {
 //            return head;
@@ -106,7 +108,6 @@
 //                    pre.next = end;
 //                }
 //                pre = start;
-//                System.out.println("pre " + pre.val);
 //                if(reverseFinishedHeader == null) {
 //                    reverseFinishedHeader = end;
 //                }

@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5086bd4f-c4d2-4403-baa6-d0630ce868ea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/ListNodeUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[83]删除排序链表中的重复元素.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/Solution$ListNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/Solution$ListNode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/Solution.class" afterDir="false" />
@@ -13,6 +16,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,6 +47,19 @@
     <property name="settings.editor.selected.configurable" value="leetcode.id" />
   </component>
   <component name="RunManager" selected="Application.Solution">
+    <configuration name="ListNodeUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.leetcode.editor.ListNodeUtils" />
+      <module name="untitled104" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.leetcode.editor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="untitled104" />
@@ -63,6 +86,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Solution" />
+        <item itemvalue="Application.ListNodeUtils" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -99,6 +123,7 @@
       <workItem from="1594778004845" duration="201000" />
       <workItem from="1594796959192" duration="1267000" />
       <workItem from="1594812946859" duration="3914000" />
+      <workItem from="1594820737141" duration="1944000" />
     </task>
     <servers />
   </component>
@@ -113,22 +138,26 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="542" height="466" key="DebuggerActiveHint/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594814777824" />
-    <state width="1396" height="233" key="GridCell.Tab.0.bottom" timestamp="1594816743950">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="2120" height="502" key="GridCell.Tab.0.bottom" timestamp="1594822392377">
+      <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state width="1396" height="233" key="GridCell.Tab.0.bottom/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594816743950" />
-    <state width="1396" height="233" key="GridCell.Tab.0.center" timestamp="1594816743949">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="2120" height="502" key="GridCell.Tab.0.bottom/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1594822392377" />
+    <state width="2120" height="502" key="GridCell.Tab.0.center" timestamp="1594822392376">
+      <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state width="1396" height="233" key="GridCell.Tab.0.center/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594816743949" />
-    <state width="1396" height="233" key="GridCell.Tab.0.left" timestamp="1594816743949">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="2120" height="502" key="GridCell.Tab.0.center/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1594822392376" />
+    <state width="2120" height="502" key="GridCell.Tab.0.left" timestamp="1594822392376">
+      <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state width="1396" height="233" key="GridCell.Tab.0.left/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594816743949" />
-    <state width="1396" height="233" key="GridCell.Tab.0.right" timestamp="1594816743950">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="2120" height="502" key="GridCell.Tab.0.left/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1594822392376" />
+    <state width="2120" height="502" key="GridCell.Tab.0.right" timestamp="1594822392376">
+      <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state width="1396" height="233" key="GridCell.Tab.0.right/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594816743950" />
+    <state width="2120" height="502" key="GridCell.Tab.0.right/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1594822392376" />
     <state width="1396" height="285" key="GridCell.Tab.1.bottom" timestamp="1594814984252">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -150,6 +179,10 @@
     </state>
     <state x="-111" y="-824" width="1547" height="722" key="SettingsEditor/0.23.1440.877/-259.-1057.1920.1057@-259.-1057.1920.1057" timestamp="1594689028897" />
     <state x="107" y="46" width="1160" height="792" key="SettingsEditor/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594774813884" />
+    <state x="1287" y="532" width="540" height="524" key="StructurePopup" timestamp="1594820905298">
+      <screen x="0" y="23" width="3008" height="1669" />
+    </state>
+    <state x="1287" y="532" width="540" height="524" key="StructurePopup/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1594820905298" />
     <state x="88" y="84" key="new project wizard" timestamp="1591583034616">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
