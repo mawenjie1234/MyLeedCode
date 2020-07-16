@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5086bd4f-c4d2-4403-baa6-d0630ce868ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/ListNodeUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[83]删除排序链表中的重复元素.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[20]有效的括号.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[84]柱状图中最大的矩形.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/doc/tu-jie-kge-yi-zu-fan-zhuan-lian-biao-by-user7208t.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/Solution$ListNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/Solution$ListNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/Solution$ListNode.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/Solution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/all.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[25]K 个一组翻转链表.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[25]K 个一组翻转链表.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/all.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,42 +136,42 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="542" height="466" key="DebuggerActiveHint/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594814777824" />
-    <state width="2120" height="502" key="GridCell.Tab.0.bottom" timestamp="1594822392377">
-      <screen x="0" y="23" width="3008" height="1669" />
+    <state width="1396" height="285" key="GridCell.Tab.0.bottom" timestamp="1594864843063">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1396" height="233" key="GridCell.Tab.0.bottom/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594816743950" />
+    <state width="1396" height="285" key="GridCell.Tab.0.bottom/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594864843063" />
     <state width="2120" height="502" key="GridCell.Tab.0.bottom/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1594822392377" />
-    <state width="2120" height="502" key="GridCell.Tab.0.center" timestamp="1594822392376">
-      <screen x="0" y="23" width="3008" height="1669" />
+    <state width="1396" height="285" key="GridCell.Tab.0.center" timestamp="1594864843062">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1396" height="233" key="GridCell.Tab.0.center/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594816743949" />
+    <state width="1396" height="285" key="GridCell.Tab.0.center/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594864843062" />
     <state width="2120" height="502" key="GridCell.Tab.0.center/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1594822392376" />
-    <state width="2120" height="502" key="GridCell.Tab.0.left" timestamp="1594822392376">
-      <screen x="0" y="23" width="3008" height="1669" />
+    <state width="1396" height="285" key="GridCell.Tab.0.left" timestamp="1594864843062">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1396" height="233" key="GridCell.Tab.0.left/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594816743949" />
+    <state width="1396" height="285" key="GridCell.Tab.0.left/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594864843062" />
     <state width="2120" height="502" key="GridCell.Tab.0.left/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1594822392376" />
-    <state width="2120" height="502" key="GridCell.Tab.0.right" timestamp="1594822392376">
-      <screen x="0" y="23" width="3008" height="1669" />
+    <state width="1396" height="285" key="GridCell.Tab.0.right" timestamp="1594864843063">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1396" height="233" key="GridCell.Tab.0.right/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594816743950" />
+    <state width="1396" height="285" key="GridCell.Tab.0.right/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594864843063" />
     <state width="2120" height="502" key="GridCell.Tab.0.right/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1594822392376" />
-    <state width="1396" height="285" key="GridCell.Tab.1.bottom" timestamp="1594814984252">
+    <state width="1396" height="285" key="GridCell.Tab.1.bottom" timestamp="1594864843065">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1396" height="285" key="GridCell.Tab.1.bottom/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594814984252" />
-    <state width="1396" height="285" key="GridCell.Tab.1.center" timestamp="1594814984252">
+    <state width="1396" height="285" key="GridCell.Tab.1.bottom/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594864843065" />
+    <state width="1396" height="285" key="GridCell.Tab.1.center" timestamp="1594864843064">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1396" height="285" key="GridCell.Tab.1.center/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594814984252" />
-    <state width="1396" height="285" key="GridCell.Tab.1.left" timestamp="1594814984251">
+    <state width="1396" height="285" key="GridCell.Tab.1.center/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594864843064" />
+    <state width="1396" height="285" key="GridCell.Tab.1.left" timestamp="1594864843064">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1396" height="285" key="GridCell.Tab.1.left/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594814984251" />
-    <state width="1396" height="285" key="GridCell.Tab.1.right" timestamp="1594814984252">
+    <state width="1396" height="285" key="GridCell.Tab.1.left/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594864843064" />
+    <state width="1396" height="285" key="GridCell.Tab.1.right" timestamp="1594864843064">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1396" height="285" key="GridCell.Tab.1.right/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594814984252" />
+    <state width="1396" height="285" key="GridCell.Tab.1.right/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594864843064" />
     <state x="107" y="46" width="1547" height="722" key="SettingsEditor" timestamp="1594774813884">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -200,6 +198,11 @@
           <url>file://$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[141]环形链表.java</url>
           <line>90</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[20]有效的括号.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
