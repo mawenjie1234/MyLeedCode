@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5086bd4f-c4d2-4403-baa6-d0630ce868ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[155]最小栈.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[229]求众数 II.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[189]旋转数组.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[22]括号生成.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[242]有效的字母异位词.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[42]接雨水.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[49]字母异位词分组.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[66]加一.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[142]环形链表 II.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[142]环形链表 II.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[239]滑动窗口最大值.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[239]滑动窗口最大值.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[88]合并两个有序数组.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[88]合并两个有序数组.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/Solution$ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/all.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[1]两数之和.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[1]两数之和.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[84]柱状图中最大的矩形.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[84]柱状图中最大的矩形.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/all.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +130,7 @@
       <workItem from="1594812946859" duration="3914000" />
       <workItem from="1594820737141" duration="1944000" />
       <workItem from="1594947631267" duration="2410000" />
-      <workItem from="1595133803695" duration="4111000" />
+      <workItem from="1595133803695" duration="13215000" />
     </task>
     <servers />
   </component>
@@ -139,47 +145,52 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="542" height="466" key="DebuggerActiveHint/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594814777824" />
-    <state width="1396" height="147" key="GridCell.Tab.0.bottom" timestamp="1594950098269">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="2120" height="283" key="GridCell.Tab.0.bottom" timestamp="1595154580121">
+      <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state width="1396" height="147" key="GridCell.Tab.0.bottom/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594950098269" />
-    <state width="2120" height="502" key="GridCell.Tab.0.bottom/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1594822392377" />
-    <state width="1396" height="147" key="GridCell.Tab.0.center" timestamp="1594950098268">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="2120" height="283" key="GridCell.Tab.0.bottom/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595154580121" />
+    <state width="2120" height="283" key="GridCell.Tab.0.center" timestamp="1595154580120">
+      <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state width="1396" height="147" key="GridCell.Tab.0.center/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594950098268" />
-    <state width="2120" height="502" key="GridCell.Tab.0.center/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1594822392376" />
-    <state width="1396" height="147" key="GridCell.Tab.0.left" timestamp="1594950098267">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="2120" height="283" key="GridCell.Tab.0.center/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595154580120" />
+    <state width="2120" height="283" key="GridCell.Tab.0.left" timestamp="1595154580120">
+      <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state width="1396" height="147" key="GridCell.Tab.0.left/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594950098267" />
-    <state width="2120" height="502" key="GridCell.Tab.0.left/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1594822392376" />
-    <state width="1396" height="147" key="GridCell.Tab.0.right" timestamp="1594950098268">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="2120" height="283" key="GridCell.Tab.0.left/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595154580120" />
+    <state width="2120" height="283" key="GridCell.Tab.0.right" timestamp="1595154580121">
+      <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state width="1396" height="147" key="GridCell.Tab.0.right/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594950098268" />
-    <state width="2120" height="502" key="GridCell.Tab.0.right/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1594822392376" />
-    <state width="1396" height="285" key="GridCell.Tab.1.bottom" timestamp="1594864843065">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="2120" height="283" key="GridCell.Tab.0.right/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595154580121" />
+    <state width="2120" height="502" key="GridCell.Tab.1.bottom" timestamp="1595152530763">
+      <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state width="1396" height="285" key="GridCell.Tab.1.bottom/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594864843065" />
-    <state width="1396" height="285" key="GridCell.Tab.1.center" timestamp="1594864843064">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="2120" height="502" key="GridCell.Tab.1.bottom/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595152530763" />
+    <state width="2120" height="502" key="GridCell.Tab.1.center" timestamp="1595152530762">
+      <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state width="1396" height="285" key="GridCell.Tab.1.center/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594864843064" />
-    <state width="1396" height="285" key="GridCell.Tab.1.left" timestamp="1594864843064">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="2120" height="502" key="GridCell.Tab.1.center/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595152530762" />
+    <state width="2120" height="502" key="GridCell.Tab.1.left" timestamp="1595152530762">
+      <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state width="1396" height="285" key="GridCell.Tab.1.left/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594864843064" />
-    <state width="1396" height="285" key="GridCell.Tab.1.right" timestamp="1594864843064">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="2120" height="502" key="GridCell.Tab.1.left/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595152530762" />
+    <state width="2120" height="502" key="GridCell.Tab.1.right" timestamp="1595152530762">
+      <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state width="1396" height="285" key="GridCell.Tab.1.right/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594864843064" />
-    <state x="107" y="46" width="1547" height="722" key="SettingsEditor" timestamp="1594774813884">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="2120" height="502" key="GridCell.Tab.1.right/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595152530762" />
+    <state x="0" y="67" width="3008" height="1375" key="SettingsEditor" timestamp="1595152521431">
+      <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state x="-111" y="-824" width="1547" height="722" key="SettingsEditor/0.23.1440.877/-259.-1057.1920.1057@-259.-1057.1920.1057" timestamp="1594689028897" />
     <state x="107" y="46" width="1160" height="792" key="SettingsEditor/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594774813884" />
+    <state x="0" y="67" width="3008" height="1375" key="SettingsEditor/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595152521431" />
     <state x="1287" y="532" width="540" height="524" key="StructurePopup" timestamp="1594820905298">
       <screen x="0" y="23" width="3008" height="1669" />
     </state>
