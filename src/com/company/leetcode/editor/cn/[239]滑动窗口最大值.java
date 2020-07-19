@@ -1,4 +1,6 @@
-////给定一个数组 nums，有一个大小为 k 的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 k 个数字。滑动窗口每次只向右移动一位。
+//package com.company.leetcode.editor.cn;
+////给定一个数组 nums，有一个大小为 k 的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 k 个数字。
+//// 滑动窗口每次只向右移动一位。
 ////
 ////
 //// 返回滑动窗口中的最大值。
@@ -39,25 +41,96 @@
 //
 //
 //import java.util.ArrayDeque;
+//import java.util.Queue;
+//import java.util.Stack;
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
+//
+//    // deque 中存储的是第几个最大值，i， 所有需要注意使用nums【deque.index】
 //    public int[] maxSlidingWindow(int[] nums, int k) {
-//        int numsCount = nums.length;
-//        if (numsCount * k == 0) return new int[0];
-//        if (k == 1) return nums;
-//        ArrayDeque<Integer> deque = new ArrayDeque<>(k);
-//        for (int i = 0; i < k; i++) {
-//            cleanQueue(deque, nums, i, k);
-//            deque.addLast(nums[i]);
-//        }
-//        int[] res = new int[numsCount - k + 1];
-//
-//        return res;
-//    }
-//
-//    private void cleanQueue(ArrayDeque<Integer> deque, int[] nums, int i, int k) {
 //
 //    }
+//
+//
+////    public int[] maxSlidingWindow(int[] nums, int k) {
+////        int length = nums.length;
+////        if (length * k == 0) {
+////            return new int[0];
+////        }
+////        if (k == 1) {
+////            return nums;
+////        }
+////
+////        ArrayDeque<Integer> deque = new ArrayDeque<>();
+////        int maxIndex = 0;
+////        for (int i = 0; i < k; i++) {
+////            clearQueue(nums, deque, i, k);
+////            deque.addLast(i);
+////            if (nums[i] > nums[maxIndex]) {
+////                maxIndex = i;
+////            }
+////        }
+////        int[] res = new int[length - k + 1];
+////        res[0] = nums[maxIndex];
+////
+////        for (int i = k; i < length; i++) {
+////            clearQueue(nums, deque, i, k);
+////            deque.addLast(i);
+////            res[i - k + 1] = nums[deque.getFirst()];
+////        }
+////
+////        return res;
+////    }
+////
+////    private void clearQueue(int[] nums, ArrayDeque<Integer> deque, int i, int k) {
+////        if (!deque.isEmpty() && deque.getFirst() == i - k) {
+////            deque.removeFirst();
+////        }
+////        while (!deque.isEmpty() && nums[deque.getLast()] < nums[i]) {
+////            deque.removeLast();
+////        }
+////    }
+//
+//
+////    private void clearQueue(int[] nums, ArrayDeque<Integer> deque, int i, int k) {
+////        if (!deque.isEmpty() && deque.getFirst() == i - k) {
+////            deque.removeFirst();
+////        }
+////        while (!deque.isEmpty() && nums[i] > nums[deque.getLast()]) {
+////            deque.removeLast();
+////        }
+////    }
+////
+////    public int[] maxSlidingWindow(int[] nums, int k) {
+////        int length = nums.length;
+////        if (length * k == 0) {
+////            return new int[0];
+////        }
+////        if (k == 1) {
+////            return nums;
+////
+////        }
+////        ArrayDeque<Integer> maxDequeue = new ArrayDeque<>();
+////        int maxIndex = 0;
+////
+////        for (int i = 0; i < k; i++) {
+////            clearQueue(nums, maxDequeue, i, k);
+////            maxDequeue.addLast(i);
+////            if (nums[i] > nums[maxIndex]) {
+////                maxIndex = i;
+////            }
+////        }
+////        int[] res = new int[nums.length - k + 1];
+////        res[0] = nums[maxIndex];
+////
+////        for (int i = k; i < length; i++) {
+////            clearQueue(nums, maxDequeue, i, k);
+////            maxDequeue.addLast(i);
+////            res[i - k + 1] = nums[maxDequeue.getFirst()];
+////        }
+////        return res;
+////    }
+//
 //}
 ////leetcode submit region end(Prohibit modification and deletion)

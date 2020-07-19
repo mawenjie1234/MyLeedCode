@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5086bd4f-c4d2-4403-baa6-d0630ce868ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[21]合并两个有序链表.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[88]合并两个有序数组.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[155]最小栈.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[229]求众数 II.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[142]环形链表 II.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[142]环形链表 II.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[239]滑动窗口最大值.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[239]滑动窗口最大值.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[88]合并两个有序数组.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[88]合并两个有序数组.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/all.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/translation.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +124,7 @@
       <workItem from="1594812946859" duration="3914000" />
       <workItem from="1594820737141" duration="1944000" />
       <workItem from="1594947631267" duration="2410000" />
+      <workItem from="1595133803695" duration="4111000" />
     </task>
     <servers />
   </component>
@@ -186,6 +188,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="88" y="84" key="new project wizard/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1591583034616" />
+    <state x="934" y="458" width="670" height="676" key="search.everywhere.popup" timestamp="1595061262618">
+      <screen x="0" y="23" width="3008" height="1669" />
+    </state>
+    <state x="934" y="458" width="670" height="676" key="search.everywhere.popup/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595061262618" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
