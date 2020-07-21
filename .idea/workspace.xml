@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5086bd4f-c4d2-4403-baa6-d0630ce868ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[146]LRU缓存机制.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[104]二叉树的最大深度.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[226]翻转二叉树.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[297]二叉树的序列化与反序列化.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[98]验证二叉搜索树.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/Solution$Node.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/Solution.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/all.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[429]N叉树的层序遍历.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[429]N叉树的层序遍历.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/leetcode/editor/cn/translation.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/all.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/translation.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +130,8 @@
       <workItem from="1594947631267" duration="2410000" />
       <workItem from="1595133803695" duration="13215000" />
       <workItem from="1595209711556" duration="8000" />
-      <workItem from="1595251329386" duration="2092000" />
+      <workItem from="1595251329386" duration="2165000" />
+      <workItem from="1595337795208" duration="1972000" />
     </task>
     <servers />
   </component>
@@ -140,46 +146,46 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="542" height="466" key="DebuggerActiveHint/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594814777824" />
-    <state width="2120" height="283" key="GridCell.Tab.0.bottom" timestamp="1595253127533">
+    <state width="2120" height="126" key="GridCell.Tab.0.bottom" timestamp="1595338771822">
       <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state width="1396" height="147" key="GridCell.Tab.0.bottom/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594950098269" />
-    <state width="2120" height="283" key="GridCell.Tab.0.bottom/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595253127533" />
-    <state width="2120" height="283" key="GridCell.Tab.0.center" timestamp="1595253127533">
+    <state width="2120" height="126" key="GridCell.Tab.0.bottom/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595338771822" />
+    <state width="2120" height="126" key="GridCell.Tab.0.center" timestamp="1595338771822">
       <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state width="1396" height="147" key="GridCell.Tab.0.center/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594950098268" />
-    <state width="2120" height="283" key="GridCell.Tab.0.center/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595253127533" />
-    <state width="2120" height="283" key="GridCell.Tab.0.left" timestamp="1595253127532">
+    <state width="2120" height="126" key="GridCell.Tab.0.center/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595338771822" />
+    <state width="2120" height="126" key="GridCell.Tab.0.left" timestamp="1595338771822">
       <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state width="1396" height="147" key="GridCell.Tab.0.left/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594950098267" />
-    <state width="2120" height="283" key="GridCell.Tab.0.left/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595253127532" />
-    <state width="2120" height="283" key="GridCell.Tab.0.right" timestamp="1595253127533">
+    <state width="2120" height="126" key="GridCell.Tab.0.left/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595338771822" />
+    <state width="2120" height="126" key="GridCell.Tab.0.right" timestamp="1595338771822">
       <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state width="1396" height="147" key="GridCell.Tab.0.right/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594950098268" />
-    <state width="2120" height="283" key="GridCell.Tab.0.right/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595253127533" />
-    <state width="2120" height="502" key="GridCell.Tab.1.bottom" timestamp="1595152530763">
+    <state width="2120" height="126" key="GridCell.Tab.0.right/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595338771822" />
+    <state width="2120" height="126" key="GridCell.Tab.1.bottom" timestamp="1595338771823">
       <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state width="1396" height="285" key="GridCell.Tab.1.bottom/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594864843065" />
-    <state width="2120" height="502" key="GridCell.Tab.1.bottom/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595152530763" />
-    <state width="2120" height="502" key="GridCell.Tab.1.center" timestamp="1595152530762">
+    <state width="2120" height="126" key="GridCell.Tab.1.bottom/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595338771823" />
+    <state width="2120" height="126" key="GridCell.Tab.1.center" timestamp="1595338771823">
       <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state width="1396" height="285" key="GridCell.Tab.1.center/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594864843064" />
-    <state width="2120" height="502" key="GridCell.Tab.1.center/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595152530762" />
-    <state width="2120" height="502" key="GridCell.Tab.1.left" timestamp="1595152530762">
+    <state width="2120" height="126" key="GridCell.Tab.1.center/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595338771823" />
+    <state width="2120" height="126" key="GridCell.Tab.1.left" timestamp="1595338771823">
       <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state width="1396" height="285" key="GridCell.Tab.1.left/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594864843064" />
-    <state width="2120" height="502" key="GridCell.Tab.1.left/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595152530762" />
-    <state width="2120" height="502" key="GridCell.Tab.1.right" timestamp="1595152530762">
+    <state width="2120" height="126" key="GridCell.Tab.1.left/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595338771823" />
+    <state width="2120" height="126" key="GridCell.Tab.1.right" timestamp="1595338771823">
       <screen x="0" y="23" width="3008" height="1669" />
     </state>
     <state width="1396" height="285" key="GridCell.Tab.1.right/0.23.1440.877/-259.-1057.1920.1057@0.23.1440.877" timestamp="1594864843064" />
-    <state width="2120" height="502" key="GridCell.Tab.1.right/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595152530762" />
+    <state width="2120" height="126" key="GridCell.Tab.1.right/3008.275.2560.1417/0.23.3008.1669@0.23.3008.1669" timestamp="1595338771823" />
     <state x="0" y="67" width="3008" height="1375" key="SettingsEditor" timestamp="1595152521431">
       <screen x="0" y="23" width="3008" height="1669" />
     </state>
@@ -217,10 +223,15 @@
           <line>86</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[226]翻转二叉树.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[94]二叉树的中序遍历.java</url>
           <line>51</line>
-          <properties class="com.company.leetcode.editor.cn.Solution" method="helper">
+          <properties class="com.company.leetcode.editor.cn.Solution">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="6" />
