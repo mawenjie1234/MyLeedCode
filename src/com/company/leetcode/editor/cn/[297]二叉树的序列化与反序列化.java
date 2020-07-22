@@ -40,21 +40,23 @@
 // */
 //class Codec {
 //
-//    public static class TreeNode {
-//        int val;
-//        TreeNode left;
-//        TreeNode right;
-//
-//        TreeNode(int x) {
-//            val = x;
-//        }
-//    }
-//
-//    public static void main(String[] args) {
-//        String nodes = "1,2,3,null,null,4,5";
-//        TreeNode treeNode = new Codec().deserialize(nodes);
-//        System.out.println();
-//    }
+////    public static class TreeNode {
+////        int val;
+////        TreeNode left;
+////        TreeNode right;
+////
+////        TreeNode(int x) {
+////            val = x;
+////        }
+////    }
+////
+////    public static void main(String[] args) {
+//////        String nodes = "1,2,3,null,null,4,5";
+////        String nodes = "null";
+////
+////        TreeNode treeNode = new Codec().deserialize(nodes);
+////        System.out.println();
+////    }
 //
 //    // Encodes a tree to a single string.
 //    public String serialize(TreeNode root) {
@@ -81,6 +83,9 @@
 //
 //    // Decodes your encoded data to tree.
 //    public TreeNode deserialize(String data) {
+//        if(data == null || data.isEmpty() || data.equals("null")) {
+//            return null;
+//        }
 //        String[] nodes = data.split(",");
 //        if(nodes.length == 0) {
 //            return null;
