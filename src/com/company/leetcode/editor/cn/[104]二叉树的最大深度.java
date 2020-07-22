@@ -1,3 +1,4 @@
+//package com.company.leetcode.editor.cn;
 ////给定一个二叉树，找出其最大深度。
 ////
 //// 二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。
@@ -19,18 +20,44 @@
 //
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
+//
 ///**
 // * Definition for a binary tree node.
 // * public class TreeNode {
-// *     int val;
-// *     TreeNode left;
-// *     TreeNode right;
-// *     TreeNode(int x) { val = x; }
+// * int val;
+// * TreeNode left;
+// * TreeNode right;
+// * TreeNode(int x) { val = x; }
 // * }
 // */
 //class Solution {
-//    public int maxDepth(TreeNode root) {
 //
-//    }
+////    public class TreeNode {
+////        int val;
+////        TreeNode left;
+////        TreeNode right;
+////
+////        TreeNode(int x) {
+////            val = x;
+////        }
+////    }
+//
+////    public int maxDepth(TreeNode root) {
+////        if(root == null) {
+////            return 0;
+////        }
+////       return childMaxDepth(root, 0);
+////    }
+////
+////    private int childMaxDepth(TreeNode root, int parentDepth) {
+////        if(root == null) {
+////            return parentDepth;
+////        }
+//////        if(root)
+////        int leftDepth = childMaxDepth(root.left, parentDepth + 1);
+////        int rightDepth = childMaxDepth(root.right, parentDepth + 1);
+////        return Math.max(leftDepth, rightDepth);
+////    }
+//
 //}
 ////leetcode submit region end(Prohibit modification and deletion)

@@ -1,3 +1,4 @@
+//package com.company.leetcode.editor.cn;
 ////序列化是将一个数据结构或者对象转换为连续的比特位的操作，进而可以将转换后的数据存储在一个文件或者内存中，同时也可以通过网络传输到另一个计算机环境，采取相反方
 ////式重构得到原数据。
 ////
@@ -25,25 +26,104 @@
 //
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
+//
+//import java.util.LinkedList;
+//
 ///**
 // * Definition for a binary tree node.
 // * public class TreeNode {
-// *     int val;
-// *     TreeNode left;
-// *     TreeNode right;
-// *     TreeNode(int x) { val = x; }
+// * int val;
+// * TreeNode left;
+// * TreeNode right;
+// * TreeNode(int x) { val = x; }
 // * }
 // */
-//public class Codec {
+//class Codec {
+//
+//    public static class TreeNode {
+//        int val;
+//        TreeNode left;
+//        TreeNode right;
+//
+//        TreeNode(int x) {
+//            val = x;
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        String nodes = "1,2,3,null,null,4,5";
+//        TreeNode treeNode = new Codec().deserialize(nodes);
+//        System.out.println();
+//    }
 //
 //    // Encodes a tree to a single string.
 //    public String serialize(TreeNode root) {
+//        LinkedList<TreeNode> stack = new LinkedList<>();
+//        StringBuilder res = new StringBuilder();
+//        stack.add(root);
+//        while (!stack.isEmpty()) {
+//            TreeNode temp = stack.pollFirst();
+//            if(temp == null) {
+//                res.append("null");
+//            }else {
+//                res.append(temp.val);
+//                stack.addLast(temp.left);
+//                stack.addLast(temp.right);
+//            }
+//            if(!stack.isEmpty()) {
+//                res.append(",");
+//            }
+//        }
+////        res.append("]");
+//        return res.toString();
 //
 //    }
 //
 //    // Decodes your encoded data to tree.
 //    public TreeNode deserialize(String data) {
+//        String[] nodes = data.split(",");
+//        if(nodes.length == 0) {
+//            return null;
+//        }
+//        TreeNode root = new TreeNode(Integer.parseInt(nodes[0]));
+//        LinkedList<TreeNode> current = new LinkedList<>();
+//        current.addLast(root);
+//        helper(nodes, current, 1);
+//        return root;
+//    }
 //
+//    private void helper(String[] source, LinkedList<TreeNode> lastLine, int index) {
+//        if(index >= source.length || lastLine == null || lastLine.isEmpty()) {
+//            return;
+//        }
+//        LinkedList<TreeNode> nextLine = new LinkedList<>();
+//        int currentIndex = index;
+//        while (!lastLine.isEmpty()) {
+//            TreeNode temp = lastLine.pollFirst();
+//            TreeNode left = createNode(source, currentIndex++);
+//            TreeNode right = createNode(source, currentIndex++);
+//            temp.left = left;
+//            temp.right = right;
+//            if(left != null) {
+//                nextLine.addLast(left);
+//            }
+//            if(right != null) {
+//                nextLine.addLast(right);
+//            }
+//        }
+//        helper(source, nextLine, currentIndex);
+//    }
+//
+//    private TreeNode createNode(String[] source, int index) {
+//        if(index >= source.length) {
+//            return null;
+//        }
+//        String value = source[index];
+//        if(value.equals("null")) {
+//            return null;
+//        }else {
+//            return new TreeNode(Integer.parseInt(value));
+//        }
 //    }
 //}
 //
