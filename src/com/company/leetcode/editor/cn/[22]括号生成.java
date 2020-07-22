@@ -18,12 +18,38 @@
 //// 👍 1172 👎 0
 //
 //
+//import java.util.ArrayList;
 //import java.util.List;
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
-//    public List<String> generateParenthesis(int n) {
 //
+////    public static void main(String[] args) {
+////        List<String> res = new Solution().generateParenthesis(3);
+////        for (String s: res) {
+////            System.out.println(s);
+////        }
+////    }
+//
+//    public List<String> generateParenthesis(int n) {
+//        List<String> res = new ArrayList<>();
+//        recur(0, 0, n, "", res);
+//        return res;
+//    }
+//
+//    private void recur(int left, int right, int n, String s, List<String> res) {
+//        // terminal
+//        if(left == n && right == n) {
+//            res.add(s);
+//            return;
+//        }
+//        // process
+//        if(left < n) {
+//            recur(left +1, right, n, s + "(", res);
+//        }
+//        if(right < left) {
+//            recur(left, right + 1, n, s+")", res);
+//        }
 //    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)
