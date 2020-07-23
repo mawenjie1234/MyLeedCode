@@ -49,30 +49,34 @@
 // */
 //class Solution {
 //
-//    public class TreeNode {
-//        int val;
-//        TreeNode left;
-//        TreeNode right;
+////    public class TreeNode {
+////        int val;
+////        TreeNode left;
+////        TreeNode right;
+////
+////        TreeNode(int x) {
+////            val = x;
+////        }
+////    }
 //
-//        TreeNode(int x) {
-//            val = x;
-//        }
-//    }
-//
+//    private TreeNode res;
 //    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-//
+//        helper(root, p, q);
+//        return res;
 //    }
 //
-//    private TreeNode bfs(TreeNode root, TreeNode p, TreeNode q) {
+//    private boolean helper(TreeNode root, TreeNode p, TreeNode q) {
 //        if(root == null) {
-//            return null;
+//            return false;
 //        }
-//        TreeNode left = bfs(root.left, p, q);
-//        TreeNode right = bfs(root.right, p, q);
-//        if(left != null && right != null) {
-//            return root;
+//        boolean left = helper(root.left, p, q);
+//        boolean right = helper(root.right, p, q);
+//
+//        if((left && right) || (left || right) && (root == p || root == q)) {
+//            res = root;
+//            // find
 //        }
-////        if()
+//        return left || right || root == p || root == q;
 //    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)
