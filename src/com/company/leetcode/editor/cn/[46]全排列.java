@@ -17,12 +17,44 @@
 //// 👍 795 👎 0
 //
 //
+//import java.util.ArrayList;
+//import java.util.Collections;
 //import java.util.List;
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
-//    public List<List<Integer>> permute(int[] nums) {
 //
+////    public static void main(String[] args) {
+////        int[] nums = {1,2,3};
+////        List<List<Integer>> res = new Solution().permute(nums);
+////        for (List<Integer> oneLine: res) {
+////            for (Integer value: oneLine) {
+////                System.out.print(value);
+////            }
+////            System.out.println();
+////        }
+////    }
+//
+//    public List<List<Integer>> permute(int[] nums) {
+//        List<List<Integer>> res = new ArrayList<>();
+//        List<Integer> out = new ArrayList<>();
+//        for (int i = 0; i < nums.length; i++) {
+//            out.add(nums[i]);
+//        }
+//        helper(res, out, 0);
+//        return res;
+//    }
+//
+//    private void helper(List<List<Integer>> res, List<Integer> out, int index) {
+//        if(index == out.size()) {
+//            res.add(new ArrayList<>(out));
+//            return;
+//        }
+//        for (int i = index; i < out.size(); i++) {
+//            Collections.swap(out, index, i);
+//            helper(res, out, index + 1);
+//            Collections.swap(out, index, i);
+//        }
 //    }
 //
 //    private

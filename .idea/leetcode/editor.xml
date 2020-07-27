@@ -235,11 +235,27 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[47]全排列 II.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[47]全排列 II.java" />
+              <option name="questionId" value="47" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[49]字母异位词分组.java">
           <value>
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[49]字母异位词分组.java" />
               <option name="questionId" value="49" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[50]Pow(x, n).java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/com/company/leetcode/editor/cn/[50]Pow(x, n).java" />
+              <option name="questionId" value="50" />
             </LeetcodeEditor>
           </value>
         </entry>
