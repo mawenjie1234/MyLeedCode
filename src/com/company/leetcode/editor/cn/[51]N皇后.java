@@ -50,36 +50,71 @@
 //    private Set<Integer> pie = new HashSet<>();
 //    private Set<Integer> na = new HashSet<>();
 //
-//    public static void main(String[] args) {
-//        List<List<String>> res =  new Solution().solveNQueens(4);
-//        System.out.println();
-//    }
+////    public static void main(String[] args) {
+////        int n = 4;
+////        List<List<String>> res =  new Solution().solveNQueens(n);
+////        for (List<String> solution: res) {
+////            for (int i = 0; i < solution.size() ; i++) {
+////                String item = solution.get(i);
+////                System.out.print(item);
+////                if(i % n == n -1) {
+////                    System.out.println();
+////                }
+////            }
+////            System.out.println("----------------");
+////        }
+////        System.out.println();
+////    }
 //
 //    public List<List<String>> solveNQueens(int n) {
 //        List<List<String>> res = new ArrayList<>();
 //        helper(res, n, 0, new ArrayList<>());
-//        return res;
+//        List<List<String>> res1 = new ArrayList<>();
+//        String oneLine = "";
+//        for (List<String> solution : res) {
+//            List<String> oneSo = new ArrayList<>();
+//            for (int i = 0; i < solution.size(); i++) {
+//                String item = solution.get(i);
+//                 oneLine += item;
+//                if (i % n == n - 1) {
+//                    oneSo.add(oneLine);
+//                    oneLine = "";
+//                }
+//            }
+//            res1.add(oneSo);
+//        }
+//        return res1;
 //    }
 //
 //    private void helper(List<List<String>> res, int n, int row, List<String> current) {
 //        // terminal
-//        if (current.size() >= n) {
-//            res.add(new ArrayList<>(current));
+//        if (row >= n) {
+//            res.add(current);
 //            return;
 //        }
 //        //progress
 //        for (int i = 0; i < n; i++) {
 //            if (columnSet.contains(i) || pie.contains(row + i) || na.contains(row - i)) {
+//                current.add(".");
 //                continue;
 //            }
 //            current.add("Q");
+//            for (int j = i + 1; j < n; j++) {
+//                current.add(".");
+//            }
+////            current.add("\n");
+//
 //            columnSet.add(i);
 //            pie.add(row + i);
 //            na.add(row - i);
 //            helper(res, n, row + 1, new ArrayList<>(current));
 //            columnSet.remove(i);
-//            pie.remove(i + row);
-//            na.remove(i - row);
+//            pie.remove(row + i);
+//            na.remove(row - i);
+//            for (int j = i; j < n; j++) {
+//                current.remove(current.size() - 1);
+//            }
+//            current.add(".");
 //        }
 //
 //        //down
