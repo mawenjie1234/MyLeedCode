@@ -35,25 +35,46 @@
 // */
 //class Solution {
 //
-//    public class TreeNode {
-//        int val;
-//        TreeNode left;
-//        TreeNode right;
-//
-//        TreeNode(int x) {
-//            val = x;
-//        }
-//    }
+////    public class TreeNode {
+////        int val;
+////        TreeNode left;
+////        TreeNode right;
+////
+////        TreeNode(int x) {
+////            val = x;
+////        }
+////    }
 //
 //    public int minDepth(TreeNode root) {
-////        LinkedList<Pair<TreeNode, Integer>> stack = new LinkedList<>();
 //
-////        if(root == null) {
-////            return 0;
-////        }else {
-////            stack.add()
-////        }
 //    }
+//
+//
+////    public int minDepth(TreeNode root) {
+////        int count = 0;
+////        if (root == null) {
+////            return count;
+////        }
+////        LinkedList<TreeNode> queue = new LinkedList<>();
+////        queue.add(root);
+////        while (!queue.isEmpty()) {
+////            int size = queue.size();
+////            count++;
+////            for (int i = 0; i < size; i++) {
+////                TreeNode node = queue.remove();
+////                if (node.left == null && node.right == null) {
+////                    return count;
+////                }
+////                if (node.left != null) {
+////                    queue.add(node.left);
+////                }
+////                if (node.right != null) {
+////                    queue.add(node.right);
+////                }
+////            }
+////        }
+////        return count;
+////    }
 //
 //}
 ////leetcode submit region end(Prohibit modification and deletion)

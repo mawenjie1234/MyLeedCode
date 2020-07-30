@@ -32,24 +32,57 @@
 ////    }
 //
 //    public List<String> generateParenthesis(int n) {
-//        List<String> res = new ArrayList<>();
-//        recur(0, 0, n, "", res);
-//        return res;
-//    }
 //
-//    private void recur(int left, int right, int n, String s, List<String> res) {
-//        // terminal
-//        if(left == n && right == n) {
-//            res.add(s);
-//            return;
-//        }
-//        // process
-//        if(left < n) {
-//            recur(left +1, right, n, s + "(", res);
-//        }
-//        if(right < left) {
-//            recur(left, right + 1, n, s+")", res);
-//        }
 //    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+////    public List<String> generateParenthesis(int n) {
+////        List<String> res = new ArrayList<>();
+////        recur(0, 0, n, "", res);
+////        return res;
+////    }
+////
+////    private void recur(int left, int right, int n, String s, List<String> res) {
+////        if (left == n && right == n) {
+////            res.add(s);
+////            return;
+////        }
+////
+////        if (left < n) {
+////            recur(left + 1, right, n, s + '(', res);
+////        }
+////        if (right < left) {
+////            recur(left, right + 1, n, s + ')', res);
+////        }
+////    }
+//
+//
+////    private void recur(int left, int right, int n, String s, List<String> res) {
+////        // terminal
+////        if(left == n && right == n) {
+////            res.add(s);
+////            return;
+////        }
+////        // process
+////        if(left < n) {
+////            recur(left +1, right, n, s + "(", res);
+////        }
+////        if(right < left) {
+////            recur(left, right + 1, n, s+")", res);
+////        }
+////    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)
