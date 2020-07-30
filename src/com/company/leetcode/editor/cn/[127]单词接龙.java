@@ -1,4 +1,5 @@
-//package com.company.leetcode.editor.cn;//给定两个单词（beginWord 和 endWord）和一个字典，找到从 beginWord 到 endWord 的最短转换序列的长度。转换需遵循如下规则：
+//package com.company.leetcode.editor.cn;
+////给定两个单词（beginWord 和 endWord）和一个字典，找到从 beginWord 到 endWord 的最短转换序列的长度。转换需遵循如下规则：
 ////
 ////
 ////
@@ -43,50 +44,91 @@
 //// 👍 391 👎 0
 //
 //
-//import java.util.ArrayList;
-//import java.util.Arrays;
-//import java.util.HashSet;
-//import java.util.List;
+//import java.util.*;
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
 //
+//    public static class Pair<A, B> {
+//
+//        public final A fst;
+//        public final B snd;
+//
+//        public Pair(A fst, B snd) {
+//            this.fst = fst;
+//            this.snd = snd;
+//        }
+//
+////        public String toString() {
+////            return "Pair[" + fst + "," + snd + "]";
+////        }
+//
+////        public boolean equals(Object other) {
+////            return
+////                    other instanceof com.company.Utils.Pair<?,?> &&
+////                            Objects.equals(fst, ((com.company.Utils.Pair<?,?>)other).fst) &&
+////                            Objects.equals(snd, ((com.company.Utils.Pair<?,?>)other).snd);
+////        }
+////
+////        public int hashCode() {
+////            if (fst == null) return (snd == null) ? 0 : snd.hashCode() + 1;
+////            else if (snd == null) return fst.hashCode() + 2;
+////            else return fst.hashCode() * 17 + snd.hashCode();
+////        }
+//
+////        public static <A,B> com.company.Utils.Pair<A,B> of(A a, B b) {
+////            return new com.company.Utils.Pair<>(a,b);
+////        }
+//    }
+//
 //    public static void main(String[] args) {
 //        String beginWord = "hit";
 //        String endWord = "cog";
-//        String[] wordList = {"hot","dot","dog","lot","log","cog"};
+//        String[] wordList = {"hot", "dot", "dog", "lot", "log", "cog"};
 //        List<String> words = Arrays.asList(wordList);
-//        System.out.println( new Solution().ladderLength(beginWord, endWord, words));
+//        System.out.println(new Solution().ladderLength(beginWord, endWord, words));
 //
 //    }
 //
 //    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
-////        HashSet<String> word = new HashSet<>(wordList);
-//        int index = helper(beginWord, endWord, 0, wordList);
-//        return index;
-//    }
+//        int l = beginWord.length();
+//        Map<String, List<String>> allComboDict = new HashMap<>();
 //
-//    private int helper(String current, String endWord, int index, List<String> word) {
-//        if (index == endWord.length()) {
-//            return index;
+//        //
+//        for (String word : wordList) {
+//            for (int i = 0; i < l; i++) {
+//                String newWord = word.substring(0, i) + '*' + word.substring(i + 1, l); // h*t,  *ot, ho*
+//                List<String> transformations = allComboDict.getOrDefault(newWord, new ArrayList<>());
+//                transformations.add(word);
+//                allComboDict.put(newWord, transformations);
+//            }
 //        }
-//        for (String dic : word) {
-//            boolean useful = true;
-//            for (int i = 0; i < index; i++) {
-//                if (current.charAt(i) != dic.charAt(i)) {
-//                    useful = false;
-//                    break;
+//
+//        Queue<Pair<String, Integer>> q = new LinkedList<>();
+//        q.add(new Pair<>(beginWord, 1));
+//
+//        Set<String> visited = new HashSet<>();
+//        visited.add(beginWord);
+//
+//        while (!q.isEmpty()) {
+//            Pair<String, Integer> node = q.remove();
+//            String word = node.fst;
+//            int level = node.snd;
+//
+//            for (int i = 0; i < l; i++) {
+//                String newWord = word.substring(0, i) + '*' + word.substring(i + 1, l);
+//                for (String adjacentWord : allComboDict.getOrDefault(newWord, new ArrayList<>())) {
+//                    if (adjacentWord.endsWith(endWord)) {
+//                        return level + 1;
+//                    }
+//                    if(!visited.contains(adjacentWord)) {
+//                        visited.add(adjacentWord);
+//                        q.add(new Pair<>(adjacentWord, level +1));
+//                    }
 //                }
 //            }
-//
-//            if (useful && dic.charAt(index) == endWord.charAt(index)) {
-//                System.out.println("current " + current+" dic is " + dic + " index " + index);
-//                StringBuilder stringBuilder = new StringBuilder(current);
-//                stringBuilder.setCharAt(index, endWord.charAt(index));
-//                helper(stringBuilder.toString(), endWord, index + 1, word);
-//            }
 //        }
-//        return index;
+//        return 0;
 //    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)
