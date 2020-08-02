@@ -38,10 +38,7 @@
 //// 👍 475 👎 0
 //
 //
-//import java.util.ArrayList;
-//import java.util.HashSet;
-//import java.util.List;
-//import java.util.Set;
+//import java.util.*;
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
@@ -49,78 +46,122 @@
 //    private Set<Integer> columnSet = new HashSet<>();
 //    private Set<Integer> pie = new HashSet<>();
 //    private Set<Integer> na = new HashSet<>();
+//    private List<int[][]> res = new ArrayList<>();
 //
 ////    public static void main(String[] args) {
 ////        int n = 4;
-////        List<List<String>> res =  new Solution().solveNQueens(n);
-////        for (List<String> solution: res) {
-////            for (int i = 0; i < solution.size() ; i++) {
+////        List<List<String>> res = new Solution().solveNQueens(n);
+////        for (List<String> solution : res) {
+////            for (int i = 0; i < solution.size(); i++) {
 ////                String item = solution.get(i);
-////                System.out.print(item);
-////                if(i % n == n -1) {
-////                    System.out.println();
-////                }
+////                System.out.println(item);
 ////            }
 ////            System.out.println("----------------");
 ////        }
 ////        System.out.println();
 ////    }
 //
+//
 //    public List<List<String>> solveNQueens(int n) {
-//        List<List<String>> res = new ArrayList<>();
-//        helper(res, n, 0, new ArrayList<>());
-//        List<List<String>> res1 = new ArrayList<>();
-//        String oneLine = "";
-//        for (List<String> solution : res) {
-//            List<String> oneSo = new ArrayList<>();
-//            for (int i = 0; i < solution.size(); i++) {
-//                String item = solution.get(i);
-//                 oneLine += item;
-//                if (i % n == n - 1) {
-//                    oneSo.add(oneLine);
-//                    oneLine = "";
+//        helper(new int[n][n], n, 0);
+//        List<List<String>> out = new ArrayList<>();
+//
+//        for (int[][] resTemp: res) {
+//            List<String> resString = new ArrayList<>();
+//            for (int i = 0; i < resTemp.length; i++) {
+//                int[] row = resTemp[i];
+//                StringBuilder builder = new StringBuilder();
+//                for (int j = 0; j < row.length; j++) {
+//                    int value = row[j];
+//                    builder.append(value == 0 ? "." : "Q");
 //                }
+//                resString.add(builder.toString());
 //            }
-//            res1.add(oneSo);
+//            out.add(resString);
 //        }
-//        return res1;
+//        return out;
 //    }
 //
-//    private void helper(List<List<String>> res, int n, int row, List<String> current) {
-//        // terminal
+//    private void helper(int[][] current, int n, int row) {
 //        if (row >= n) {
-//            res.add(current);
+//            int[][] copy = new int[n][n];
+//            for (int i = 0; i < n; i++) {
+//                System.arraycopy(current[i], 0, copy[i], 0, n);
+//            }
+//            res.add(copy);
 //            return;
 //        }
-//        //progress
 //        for (int i = 0; i < n; i++) {
-//            if (columnSet.contains(i) || pie.contains(row + i) || na.contains(row - i)) {
-//                current.add(".");
-//                continue;
+//            if (!columnSet.contains(i) && !pie.contains(row + i) && !na.contains(row - i)) {
+//                current[row][i] = 1;
+//                columnSet.add(i);
+//                pie.add(row + i);
+//                na.add(row - i);
+//                helper(current, n, row + 1);
+//                columnSet.remove(i);
+//                pie.remove(row + i);
+//                na.remove(row - i);
+//                current[row][i] = 0;
 //            }
-//            current.add("Q");
-//            for (int j = i + 1; j < n; j++) {
-//                current.add(".");
-//            }
-////            current.add("\n");
-//
-//            columnSet.add(i);
-//            pie.add(row + i);
-//            na.add(row - i);
-//            helper(res, n, row + 1, new ArrayList<>(current));
-//            columnSet.remove(i);
-//            pie.remove(row + i);
-//            na.remove(row - i);
-//            for (int j = i; j < n; j++) {
-//                current.remove(current.size() - 1);
-//            }
-//            current.add(".");
 //        }
-//
-//        //down
-//
-//        // reverse
 //    }
+//
+//
+////    public List<List<String>> solveNQueens(int n) {
+////        List<List<String>> res = new ArrayList<>();
+////        helper(res, n, 0, new ArrayList<>());
+////        List<List<String>> res1 = new ArrayList<>();
+////        String oneLine = "";
+////        for (List<String> solution : res) {
+////            List<String> oneSo = new ArrayList<>();
+////            for (int i = 0; i < solution.size(); i++) {
+////                String item = solution.get(i);
+////                oneLine += item;
+////                if (i % n == n - 1) {
+////                    oneSo.add(oneLine);
+////                    oneLine = "";
+////                }
+////            }
+////            res1.add(oneSo);
+////        }
+////        return res1;
+////    }
+////
+////    private void helper(List<List<String>> res, int n, int row, List<String> current) {
+////        // terminal
+////        if (row >= n) {
+////            res.add(current);
+////            return;
+////        }
+////        //progress
+////        for (int i = 0; i < n; i++) {
+////            if (columnSet.contains(i) || pie.contains(row + i) || na.contains(row - i)) {
+////                current.add(".");
+////                continue;
+////            }
+////            current.add("Q");
+////            for (int j = i + 1; j < n; j++) {
+////                current.add(".");
+////            }
+//////            current.add("\n");
+////
+////            columnSet.add(i);
+////            pie.add(row + i);
+////            na.add(row - i);
+////            helper(res, n, row + 1, new ArrayList<>(current));
+////            columnSet.remove(i);
+////            pie.remove(row + i);
+////            na.remove(row - i);
+////            for (int j = i; j < n; j++) {
+////                current.remove(current.size() - 1);
+////            }
+////            current.add(".");
+////        }
+////
+////        //down
+////
+////        // reverse
+////    }
 //
 //
 //}
