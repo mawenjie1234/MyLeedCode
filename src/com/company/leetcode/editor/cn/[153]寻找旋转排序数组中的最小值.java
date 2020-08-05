@@ -23,24 +23,35 @@
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
 ////    public static void main(String[] args) {
-////        int[] nums = {5,1,3};
+////        int[] nums = {5,1,3,2};
 ////        System.out.println(new Solution().findMin(nums));
 ////    }
 //
 //    public int findMin(int[] nums) {
+//        if (nums.length == 1) {
+//            return nums[0];
+//        }
+//        if (nums[0] < nums[nums.length - 1]) {
+//            return nums[0];
+//        }
+//
 //        int left = 0;
 //        int right = nums.length - 1;
-//        int min = Integer.MAX_VALUE;
 //        while (left <= right) {
-//            int mid = (left + right) / 2;
-//            min = Math.min(nums[mid], min);
-//            if (nums[left] <= nums[right]) {
-//                right = mid - 1;
-//            } else {
+//            int mid = left + (right - left) / 2;
+//            if (nums[mid] > nums[mid + 1]) {
+//                return nums[mid + 1];
+//            }
+//            if (nums[mid] < nums[mid - 1]) {
+//                return nums[mid];
+//            }
+//            if (nums[0] < nums[mid]) {
 //                left = mid + 1;
+//            } else {
+//                right = mid - 1;
 //            }
 //        }
-//        return min;
+//        return -1;
 //    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)
