@@ -58,27 +58,6 @@
 //            this.fst = fst;
 //            this.snd = snd;
 //        }
-//
-////        public String toString() {
-////            return "Pair[" + fst + "," + snd + "]";
-////        }
-//
-////        public boolean equals(Object other) {
-////            return
-////                    other instanceof com.company.Utils.Pair<?,?> &&
-////                            Objects.equals(fst, ((com.company.Utils.Pair<?,?>)other).fst) &&
-////                            Objects.equals(snd, ((com.company.Utils.Pair<?,?>)other).snd);
-////        }
-////
-////        public int hashCode() {
-////            if (fst == null) return (snd == null) ? 0 : snd.hashCode() + 1;
-////            else if (snd == null) return fst.hashCode() + 2;
-////            else return fst.hashCode() * 17 + snd.hashCode();
-////        }
-//
-////        public static <A,B> com.company.Utils.Pair<A,B> of(A a, B b) {
-////            return new com.company.Utils.Pair<>(a,b);
-////        }
 //    }
 //
 //    public static void main(String[] args) {
@@ -90,45 +69,50 @@
 //
 //    }
 //
-//    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
-//        int l = beginWord.length();
-//        Map<String, List<String>> allComboDict = new HashMap<>();
+////    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+////        int beginL = beginWord.length();
+////        HashMap<>
+////    }
 //
-//        //
-//        for (String word : wordList) {
-//            for (int i = 0; i < l; i++) {
-//                String newWord = word.substring(0, i) + '*' + word.substring(i + 1, l); // h*t,  *ot, ho*
-//                List<String> transformations = allComboDict.getOrDefault(newWord, new ArrayList<>());
-//                transformations.add(word);
-//                allComboDict.put(newWord, transformations);
-//            }
-//        }
 //
-//        Queue<Pair<String, Integer>> q = new LinkedList<>();
-//        q.add(new Pair<>(beginWord, 1));
-//
-//        Set<String> visited = new HashSet<>();
-//        visited.add(beginWord);
-//
-//        while (!q.isEmpty()) {
-//            Pair<String, Integer> node = q.remove();
-//            String word = node.fst;
-//            int level = node.snd;
-//
-//            for (int i = 0; i < l; i++) {
-//                String newWord = word.substring(0, i) + '*' + word.substring(i + 1, l);
-//                for (String adjacentWord : allComboDict.getOrDefault(newWord, new ArrayList<>())) {
-//                    if (adjacentWord.endsWith(endWord)) {
-//                        return level + 1;
-//                    }
-//                    if(!visited.contains(adjacentWord)) {
-//                        visited.add(adjacentWord);
-//                        q.add(new Pair<>(adjacentWord, level +1));
-//                    }
-//                }
-//            }
-//        }
-//        return 0;
-//    }
+////    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+////        int l = beginWord.length();
+////        Map<String, List<String>> allComboDict = new HashMap<>();
+////
+////        for (String word : wordList) {
+////            for (int i = 0; i < l; i++) {
+////                String newWord = word.substring(0, i) + '*' + word.substring(i + 1, l); // h*t,  *ot, ho*
+////                List<String> transformations = allComboDict.getOrDefault(newWord, new ArrayList<>());
+////                transformations.add(word);
+////                allComboDict.put(newWord, transformations);
+////            }
+////        }
+////
+////        Queue<Pair<String, Integer>> q = new LinkedList<>();
+////        q.add(new Pair<>(beginWord, 1));
+////
+////        Set<String> visited = new HashSet<>();
+////        visited.add(beginWord);
+////
+////        while (!q.isEmpty()) {
+////            Pair<String, Integer> node = q.remove();
+////            String word = node.fst;
+////            int level = node.snd;
+////
+////            for (int i = 0; i < l; i++) {
+////                String newWord = word.substring(0, i) + '*' + word.substring(i + 1, l);
+////                for (String adjacentWord : allComboDict.getOrDefault(newWord, new ArrayList<>())) {
+////                    if (adjacentWord.endsWith(endWord)) {
+////                        return level + 1;
+////                    }
+////                    if(!visited.contains(adjacentWord)) {
+////                        visited.add(adjacentWord);
+////                        q.add(new Pair<>(adjacentWord, level +1));
+////                    }
+////                }
+////            }
+////        }
+////        return 0;
+////    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)
