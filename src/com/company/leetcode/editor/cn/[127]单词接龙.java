@@ -66,16 +66,47 @@
 //        String[] wordList = {"hot", "dot", "dog", "lot", "log", "cog"};
 //        List<String> words = Arrays.asList(wordList);
 //        System.out.println(new Solution().ladderLength(beginWord, endWord, words));
-//
 //    }
 //
-////    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
-////        int beginL = beginWord.length();
-////        HashMap<>
-////    }
+//    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+//        int l = beginWord.length();
+//        HashMap<String, List<String>> dic = new HashMap<>();
+//        for (String word : wordList) {
+//            for (int i = 0; i < word.length(); i++) {
+//                String newWord = word.substring(0, i) + "*" + word.substring(i + 1, word.length());
+//                List<String> dicList = dic.getOrDefault(newWord, new ArrayList<>());
+//                dicList.add(word);
+//                dic.put(newWord, dicList);
+//            }
+//        }
+//        Queue<Pair<String, Integer>> q = new ArrayDeque<>();
+//        q.add(new Pair<>(beginWord, 1));
+//        HashSet<String> visited = new HashSet<>();
+//        visited.add(beginWord);
+//
+//        while (!q.isEmpty()) {
+//            Pair<String, Integer> node = q.remove();
+//            String word = node.fst;
+//            Integer index = node.snd;
+//            for (int i = 0; i < word.length(); i++) {
+//                String newWord = word.substring(0, i) + "*" + word.substring(i + 1, word.length());
+//                for (String adjacentWord : dic.getOrDefault(newWord, new ArrayList<>())) {
+//                    if (adjacentWord.endsWith(endWord)) {
+//                        return index + 1;
+//                    }
+//                    if (visited.contains(adjacentWord)) {
+//                        continue;
+//                    }
+//                    visited.add(adjacentWord);
+//                    q.add(new Pair<>(adjacentWord, index + 1));
+//                }
+//            }
+//        }
+//        return 0;
+//    }
 //
 //
-////    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+////    public int ladderLength1(String beginWord, String endWord, List<String> wordList) {
 ////        int l = beginWord.length();
 ////        Map<String, List<String>> allComboDict = new HashMap<>();
 ////
