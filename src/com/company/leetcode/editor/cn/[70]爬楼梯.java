@@ -35,28 +35,44 @@
 //import java.util.HashMap;
 //
 //class Solution {
-////    public static void main(String[] args) {
-////        System.out.println(new Solution().climbStairs(4));
-////    }
+//    public static void main(String[] args) {
+//        System.out.println(new Solution().climbStairs(4));
+//    }
 //
 //    public int climbStairs(int n) {
-//        HashMap<Integer, Integer> progress = new HashMap<>();
-//        return helper(n, progress);
+//        if(n < 3) {
+//            return n;
+//        }
+//        int stairs = 0;
+//        int first = 1;
+//        int sed = 2;
+//        for (int i = 3; i <= n; i++) {
+//            stairs = first + sed;
+//            first = sed;
+//            sed = stairs;
+//        }
+//        return stairs;
 //    }
 //
-//    private int helper(int n, HashMap<Integer, Integer> progress) {
-//        if (progress.containsKey(n)) {
-//            return progress.get(n);
-//        }
-//        int res;
-//        if (n == 1 || n == 2) {
-//            res = n;
-//        } else {
-//            res = helper(n -1, progress) + helper(n - 2, progress);
-//        }
-//        progress.put(n, res);
-//        return res;
-//    }
+//
+////    public int climbStairs(int n) {
+////        HashMap<Integer, Integer> progress = new HashMap<>();
+////        return helper(n, progress);
+////    }
+////
+////    private int helper(int n, HashMap<Integer, Integer> progress) {
+////        if (progress.containsKey(n)) {
+////            return progress.get(n);
+////        }
+////        int res;
+////        if (n == 1 || n == 2) {
+////            res = n;
+////        } else {
+////            res = helper(n -1, progress) + helper(n - 2, progress);
+////        }
+////        progress.put(n, res);
+////        return res;
+////    }
 //}
 //
 //
