@@ -34,35 +34,58 @@
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
-//    public static void main(String[] args) {
-//        int[][] nums = {
-//                {0, 0, 0},
-//                {0, 1, 0},
-//                {0, 0, 0}
-//        };
+////    public static void main(String[] args) {
+//////        int[][] nums = {
+//////                {0, 0, 0},
+//////                {0, 1, 0},
+//////                {0, 0, 0}
+//////        };
 ////        int[][] nums = {
 ////                {0, 1}
 ////        };
-//        System.out.println(new Solution().uniquePathsWithObstacles(nums));
-//    }
+////        System.out.println(new Solution().uniquePathsWithObstacles(nums));
+////    }
 //
 //    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
-//        int row = obstacleGrid.length;
-//        int column = obstacleGrid[0].length;
-//        int[] f = new int[column];
-//        f[0] = obstacleGrid[0][0] == 0 ? 1 : 0;
-//        for (int i = 0; i < row; i++) {
-//            for (int j = 0; j < column; j++) {
-//                if (obstacleGrid[i][j] == 1) {
-//                    f[j] = 0;
-//                    continue;
-//                }
-//                if (j - 1 >= 0 && obstacleGrid[i][j - 1] == 0) {
-//                    f[j] += f[j - 1];
+//        if (obstacleGrid == null || obstacleGrid.length == 0) {
+//            return 0;
+//        }
+//        int m = obstacleGrid.length, n = obstacleGrid[0].length;
+//        int[][] dp = new int[m][n];
+//        for (int i = 0; i < m && obstacleGrid[i][0] == 0; i++) {
+//            dp[i][0] = 1;
+//        }
+//        for (int i = 0; i < n && obstacleGrid[0][i] == 0; i++) {
+//            dp[0][i] = 1;
+//        }
+//        for (int i = 1; i < m; i++) {
+//            for (int j = 1; j < n; j++) {
+//                if (obstacleGrid[i][j] == 0) {
+//                    dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
 //                }
 //            }
 //        }
-//        return f[column - 1];
+//        return dp[m-1][n-1];
 //    }
+//
+//
+////    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+////        int row = obstacleGrid.length;
+////        int column = obstacleGrid[0].length;
+////        int[] f = new int[column];
+////        f[0] = obstacleGrid[0][0] == 0 ? 1 : 0;
+////        for (int i = 0; i < row; i++) {
+////            for (int j = 0; j < column; j++) {
+////                if (obstacleGrid[i][j] == 1) {
+////                    f[j] = 0;
+////                    continue;
+////                }
+////                if (j - 1 >= 0 && obstacleGrid[i][j - 1] == 0) {
+////                    f[j] += f[j - 1];
+////                }
+////            }
+////        }
+////        return f[column - 1];
+////    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)
