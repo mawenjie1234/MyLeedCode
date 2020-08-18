@@ -32,19 +32,26 @@
 //
 //
 //import java.util.ArrayList;
+//import java.util.HashSet;
 //import java.util.List;
+//import java.util.Set;
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
 //
 //    public static void main(String[] args) {
+////        char[][] chars = {
+////                {'o', 'a', 'a', 'n'},
+////                {'e', 't', 'a', 'e'},
+////                {'i', 'h', 'k', 'r'},
+////                {'i', 'f', 'l', 'v'}
+////        };
+////        String[] words = {"oath", "pea", "eat", "rain"};
+//
 //        char[][] chars = {
-//                {'o', 'a', 'a', 'n'},
-//                {'e', 't', 'a', 'e'},
-//                {'i', 'h', 'k', 'r'},
-//                {'i', 'f', 'l', 'v'}
+//                {'a', 'a'},
 //        };
-//        String[] words = {"oath", "pea", "eat", "rain"};
+//        String[] words = {"a"};
 //
 //        List<String> res = new Solution().findWords(chars, words);
 //        for (String s : res) {
@@ -58,27 +65,28 @@
 //            trie.insert(word);
 //        }
 //
-//        List<String> res = new ArrayList<>();
+//        Set<String> res = new HashSet<>();
 //        for (int i = 0; i < board.length; i++) {
 //            char[] row = board[i];
 //            for (int j = 0; j < row.length; j++) {
-//                if(i == 1 && j ==0) {
-//                    System.out.println();
+//                char ch = board[i][j];
+//                if(trie.root.contains(ch)) {
+//                    boolean find = helper(board, res, i, j, trie.root.get(ch));
+////                    if(find) {
+////                        System.out.println(i + ", "+  j);
+////                    }
 //                }
-//                boolean find = helper(board, res, i, j, trie.root);
-//                if(find) {
-//                    System.out.println(i + ", "+  j);
-//                }
+//
 //            }
 //        }
-//        return res;
+//        return new ArrayList<>(res);
 //    }
 //
 //    //              left, bottom, right, top
 //    int[] mRow =    {0, 1, 0, -1};
 //    int[] mColumn = {-1, 0, 1, 0};
 //
-//    private boolean helper(char[][] board, List<String> res, int row, int column, TrieNode trieNode) {
+//    private boolean helper(char[][] board, Set<String> res, int row, int column, TrieNode trieNode) {
 //        // terminal
 //        boolean find = false;
 //        if (trieNode.isEnd()) {
@@ -98,9 +106,7 @@
 //                }
 //            }
 //        }
-//        //down
 //
-//        //revert
 //        board[row][column] = ch;
 //        return find;
 //    }
