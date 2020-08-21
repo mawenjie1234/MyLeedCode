@@ -55,7 +55,21 @@
 //        System.out.println(new Solution().numIslands(grid));
 //    }
 //    public int numIslands(char[][] grid) {
+//        return 0;
+//    }
 //
+//    private class UnionFind {
+//        int[] parent;
+//        int count = 0;
+//        public UnionFind(int n) {
+//            parent = new int[n];
+//            count = n;
+//            for (int i = 0; i < n; i++) {
+//                parent[i] = i;
+//            }
+//        }
+//
+//        
 //    }
 //
 //
