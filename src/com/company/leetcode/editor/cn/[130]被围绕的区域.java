@@ -27,6 +27,8 @@
 //// 👍 355 👎 0
 //
 //
+//import java.util.HashSet;
+//
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
 //    public static void main(String[] args) {
@@ -36,9 +38,16 @@
 //                {'X', 'X', 'O', 'X',},
 //                {'X', 'O', 'X', 'X',}
 //        };
+//
+//        char[][] board1 = {
+//                {'X', 'O', 'X', 'X'},
+//                {'O', 'X', 'O', 'X',},
+//                {'X', 'O', 'X', 'O',},
+//                {'O', 'X', 'O', 'X',}
+//        };
 //        new Solution().solve(board);
 //        for (int i = 0; i < board.length; i++) {
-//                char[] row = board[i];
+//            char[] row = board[i];
 //            for (int j = 0; j < row.length; j++) {
 //                System.out.print(board[i][j] + ",");
 //            }
@@ -47,7 +56,66 @@
 //    }
 //
 //    public void solve(char[][] board) {
+//        int row = board.length;
+//        if(row == 0) {
+//            return;
+//        }
+//        int column = board[0].length;
+//        if(column <= 1) {
+//            return;
+//        }
+//        for (int i = 0; i < row; i++) {
+//            for (int j = 0; j < column; j++) {
+//                dfs(board, null, i, j, column);
+//            }
+//        }
+//    }
 //
+//    /***
+//     * left, top, right, bottom
+//     */
+//    int[] x = {-1, 0, 1, 0};
+//    int[] y = {0, 1, 0, -1};
+//
+//    /**
+//     * @param board
+//     * @param visited
+//     * @param i
+//     * @param j
+//     * @param column
+//     * @return 子节点是否是封闭区间
+//     */
+//    private boolean dfs(char[][] board, HashSet<Integer> visited, int i, int j, int column) {
+////        if (visited.contains(i * column + j)) {
+////            return false;
+////        }
+////        visited.add(i * column + j);
+//        boolean res = true;
+//        if(i == 3 && j == 1) {
+//            System.out.println();
+//        }
+//        char ori = board[i][j];
+//        if (board[i][j] == 'O') {
+//            // 边缘的O， 那么一定是不封闭的区间
+//            if (i == 0 || i == board.length - 1 || j == 0 && j == column - 1) {
+//                res = false;
+//            } else {
+//                board[i][j] = 'X';
+//                for (int k = 0; k < x.length; k++) {
+//                    int nextI = i + x[k];
+//                    int nextJ = i + y[k];
+//                    if(nextI >= 0 && nextI < board.length && nextJ >= 0 && nextJ < column) {
+//                        res = res && dfs(board, visited, nextI, nextJ, column);
+//                    }
+//                }
+//            }
+//
+//        }
+//        if (!res) {
+//            board[i][j] = ori;
+//        }
+//
+//        return res;
 //    }
 //
 //
