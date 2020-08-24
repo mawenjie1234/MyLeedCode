@@ -38,8 +38,32 @@
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
-//    public int totalNQueens(int n) {
+//    public static void main(String[] args) {
+//        System.out.println(new Solution().totalNQueens(4));
+//    }
 //
+//    int count;
+//
+//    public int totalNQueens(int n) {
+//        if (n < 1) {
+//            return 0;
+//        }
+//        count = 0;
+//        dfs(n, 0, 0, 0, 0);
+//        return count;
+//    }
+//
+//    private void dfs(int n, int row, int column, int pie, int na) {
+//        if (row >= n) {
+//            count++;
+//            return;
+//        }
+//        int bits = (~(column | pie | na)) & ((1 << n) - 1);
+//        while (bits != 0) {
+//            int p = bits & -bits;
+//            bits = bits & (bits - 1);
+//            dfs(n, row + 1, column | p, (pie | p) << 1, (na | p) >> 1);
+//        }
 //    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)
