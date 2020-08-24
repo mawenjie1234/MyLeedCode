@@ -43,10 +43,6 @@
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
 //
-//    private Set<Integer> columnSet = new HashSet<>();
-//    private Set<Integer> pie = new HashSet<>();
-//    private Set<Integer> na = new HashSet<>();
-//    private List<int[][]> res = new ArrayList<>();
 //
 ////    public static void main(String[] args) {
 ////        int n = 4;
@@ -61,9 +57,10 @@
 ////        System.out.println();
 ////    }
 //
+//    private List<int[][]> res = new ArrayList<>();
 //
 //    public List<List<String>> solveNQueens(int n) {
-//        helper(new int[n][n], n, 0);
+//        solveNQ(n);
 //        List<List<String>> out = new ArrayList<>();
 //
 //        for (int[][] resTemp: res) {
@@ -80,31 +77,62 @@
 //            out.add(resString);
 //        }
 //        return out;
+//
 //    }
 //
-//    private void helper(int[][] current, int n, int row) {
-//        if (row >= n) {
-//            int[][] copy = new int[n][n];
-//            for (int i = 0; i < n; i++) {
-//                System.arraycopy(current[i], 0, copy[i], 0, n);
-//            }
-//            res.add(copy);
-//            return;
-//        }
-//        for (int i = 0; i < n; i++) {
-//            if (!columnSet.contains(i) && !pie.contains(row + i) && !na.contains(row - i)) {
-//                current[row][i] = 1;
-//                columnSet.add(i);
-//                pie.add(row + i);
-//                na.add(row - i);
-//                helper(current, n, row + 1);
-//                columnSet.remove(i);
-//                pie.remove(row + i);
-//                na.remove(row - i);
-//                current[row][i] = 0;
-//            }
-//        }
+//    private List<int[][]> solveNQ(int n) {
+//
+//        return res;
 //    }
+//
+//
+////    private Set<Integer> columnSet = new HashSet<>();
+////    private Set<Integer> pie = new HashSet<>();
+////    private Set<Integer> na = new HashSet<>();
+//
+////    public List<List<String>> solveNQueens(int n) {
+////        helper(new int[n][n], n, 0);
+////        List<List<String>> out = new ArrayList<>();
+////
+////        for (int[][] resTemp: res) {
+////            List<String> resString = new ArrayList<>();
+////            for (int i = 0; i < resTemp.length; i++) {
+////                int[] row = resTemp[i];
+////                StringBuilder builder = new StringBuilder();
+////                for (int j = 0; j < row.length; j++) {
+////                    int value = row[j];
+////                    builder.append(value == 0 ? "." : "Q");
+////                }
+////                resString.add(builder.toString());
+////            }
+////            out.add(resString);
+////        }
+////        return out;
+////    }
+////
+////    private void helper(int[][] current, int n, int row) {
+////        if (row >= n) {
+////            int[][] copy = new int[n][n];
+////            for (int i = 0; i < n; i++) {
+////                System.arraycopy(current[i], 0, copy[i], 0, n);
+////            }
+////            res.add(copy);
+////            return;
+////        }
+////        for (int i = 0; i < n; i++) {
+////            if (!columnSet.contains(i) && !pie.contains(row + i) && !na.contains(row - i)) {
+////                current[row][i] = 1;
+////                columnSet.add(i);
+////                pie.add(row + i);
+////                na.add(row - i);
+////                helper(current, n, row + 1);
+////                columnSet.remove(i);
+////                pie.remove(row + i);
+////                na.remove(row - i);
+////                current[row][i] = 0;
+////            }
+////        }
+////    }
 //
 //
 ////    public List<List<String>> solveNQueens(int n) {

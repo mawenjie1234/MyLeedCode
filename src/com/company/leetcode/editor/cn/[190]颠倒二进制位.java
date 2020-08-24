@@ -44,14 +44,15 @@
 //    }
 //
 //    public int reverseBits(int n) {
-//        int res = n;
-//        int power = 31;
-//        while (n != 0) {
-//            res += (n & 1) << power;
-//            n >>= 1;
-//            power -= 1;
+//        if(n == 0) {
+//            return n;
 //        }
-//
+//        int res = n;
+//        for (int i = 0; i < 32; i++) {
+//            res <<= 1;
+//            if ((n & 1) == 1) res += 1;
+//            n >>= 1;
+//        }
 //        return res;
 //    }
 //}
