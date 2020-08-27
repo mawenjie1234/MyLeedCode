@@ -30,30 +30,47 @@
 //
 //
 //import java.util.ArrayList;
+//import java.util.Arrays;
+//import java.util.Collections;
 //import java.util.List;
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
-//    public static void main(String[] args) {
-//        int[][] nums = {{5, 6}, {1, 2}};
-//        new Solution().mergeSort(nums, 0, nums.length - 1);
-//        for (int i = 0; i < nums.length; i++) {
-//            System.out.print("[");
-//            for (int j = 0; j < nums[i].length; j++) {
-//                System.out.print(nums[i][j]);
-//                System.out.print(",");
-//            }
-//            System.out.print("]");
-//        }
-//    }
+////    public static void main(String[] args) {
+////        int[][] nums = {{1,3},{2,6},{8,10},{15,18}};
+////        int[][] res = new Solution().merge(nums);
+////        for (int i = 0; i < res.length; i++) {
+////            System.out.print("[");
+////            for (int j = 0; j < res[i].length; j++) {
+////                System.out.print(res[i][j]);
+////                System.out.print(",");
+////            }
+////            System.out.print("]");
+////        }
+////    }
 //
 //    public int[][] merge(int[][] intervals) {
 //        mergeSort(intervals, 0 , intervals.length-1);
-//        List<List<Integer>> res = new ArrayList<>();
-//        int lastRight = intervals[0][1];
+//        List<int[]> res = new ArrayList<>();
+//
+//        int[] lastRight = null;
 //        for (int i = 0; i < intervals.length; i++) {
-//            
+//            if(lastRight == null) {
+//                lastRight = intervals[i];
+//            }else {
+//                int[] current = intervals[i];
+//                if(lastRight[1] >= current[0]) {
+//                    lastRight[1] = Math.max(lastRight[1], current[1]);
+//                }else {
+//                    res.add(lastRight);
+//                    lastRight = current;
+//                }
+//            }
 //        }
+//        if(lastRight!= null) {
+//            res.add(lastRight);
+//        }
+//        return res.toArray(new int[0][0]);
 //    }
 //
 //    private void mergeSort(int[][] intervals, int left, int right) {
