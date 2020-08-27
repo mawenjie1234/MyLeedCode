@@ -17,7 +17,7 @@
 ////输出：[2,2,2,1,4,3,3,9,6,7,19]
 ////
 ////
-//// 
+////
 ////
 //// 提示：
 ////
@@ -31,10 +31,54 @@
 //// 👍 77 👎 0
 //
 //
+//import java.util.TreeMap;
+//
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
-//    public int[] relativeSortArray(int[] arr1, int[] arr2) {
 //
+//
+//    public int[] relativeSortArray(int[] arr1, int[] arr2) {
+//        TreeMap<Integer, Integer> map = new TreeMap<>();
+//        for (int n : arr1) {
+//            map.put(n, map.getOrDefault(n, 0) + 1);
+//        }
+//        int i = 0;
+//        for (int n : arr2) {
+//            int count = map.get(n);
+//            for (int j = 0; j < count; j++) {
+//                arr1[i++] = n;
+//            }
+//            map.remove(n);
+//        }
+//        for (int n : map.keySet()) {
+//            int count = map.get(n);
+//            for (int j = 0; j < count; j++) {
+//                arr1[i++] = n;
+//            }
+////            map.remove(n);
+//        }
+//
+//        return arr1;
 //    }
+//
+//
+////    public int[] relativeSortArray(int[] arr1, int[] arr2) {
+////        int[] cat = new int[1001];
+////        for (int arr : arr1) {
+////            cat[arr]++;
+////        }
+////        int i = 0;
+////        for (int arr : arr2) {
+////            while (cat[arr]-- > 0) {
+////                arr1[i++] = arr;
+////            }
+////        }
+////        for (int arr = 0; arr < cat.length; arr++) {
+////            while (cat[arr]-- > 0) {
+////                arr1[i++] = arr;
+////            }
+////        }
+////        return arr1;
+////    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)

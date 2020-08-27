@@ -26,11 +26,34 @@
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
 //
-////    public static void main(String[] args) {
-////        String s = "anagram";
-////        String t = "nagaram";
-////        System.out.println(new Solution().isAnagram(s, t));
-////    }
+//    public static void main(String[] args) {
+//        String s = "anagram";
+//        String t = "nagaram";
+//        System.out.println(new Solution().isAnagram(s, t));
+//    }
+//
+//    public boolean isAnagram(String s, String t) {
+//        if(s.length() != t.length()) {
+//            return false;
+//        }
+//        int[] nums = new int[26];
+//        for (int i = 0; i < s.length(); i++) {
+//            char sChar = s.charAt(i);
+//            nums[sChar-'a']++;
+//        }
+//        for (int i = 0; i < t.length(); i++) {
+//            char tChar = t.charAt(i);
+//            int index = tChar - 'a';
+//            nums[index]--;
+//            if(nums[index] < 0) {
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
+//
+//
+//
 //
 //
 ////    public boolean isAnagram(String s, String t) {
