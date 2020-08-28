@@ -31,79 +31,103 @@
 //class Solution {
 //    public static void main(String[] args) {
 //        int[] nums = {2, 4, 3, 5, 1};
-//        int[] nums2 = {1,3,2,3,1};
-//
+//        int[] nums2 = {1, 3, 2, 3, 1};
+////        int[] nums3 = {2147483647, 2147483647, 2147483647, 2147483647, 2147483647, 2147483647};
 ////        new Solution().merge(nums, 0, nums.length-1);
 ////        for (int i = 0; i < nums.length; i++) {
 ////            System.out.print(nums[i]);
 ////            System.out.print(',');
 ////        }
-//        System.out.println(new Solution().reversePairs(nums2));
+//        System.out.println(new Solution().reversePairs(nums));
+////        System.out.print(new Solution().reversePairs2(nums));
 //    }
 //
 //    public int reversePairs(int[] nums) {
-//        return merge(nums, 0, nums.length - 1);
+//        if (nums == null || nums.length == 0) return 0;
+//        return mergeSort(nums, 0, nums.length - 1);
 //    }
 //
-//    private int merge(int[] nums, int left, int right) {
+//    private int mergeSort(int[] nums, int l, int r) {
+//        if (l >= r) return 0;
+//        int mid = (l + r) >> 1;
+//
+//        int count = mergeSort(nums, l, mid) + mergeSort(nums, mid + 1, r);
+//
+//        int[] cache = new int[r - l + 1];
+//        int i = l, t = l, c = 0;
+//        for (int j = mid + 1; j <= r; j++, c++) {
+//            while (i <= mid && nums[i] <= 2 * (long) nums[j]) i++;
+//            while (t <= mid && nums[t] < nums[j]) cache[c++] = nums[t++];
+//            cache[c] = nums[j];
+//            count += mid - i + 1;
+//        }
+//        while (t <= mid) cache[c++] = nums[t++];
+//        System.arraycopy(cache, 0, nums, l, r - l + 1);
+//        return count;
+//    }
+//
+//    private int mergeSort1(int[] nums, int left, int right) {
 //        if (left >= right) {
 //            return 0;
 //        }
 //        int mid = (left + right) >> 1;
-//        int leftV = merge(nums, left, mid);
-//        if(mid == 2) {
-//            System.out.print("");
+//        int count = mergeSort(nums, left, mid) + mergeSort(nums, mid + 1, right);
+//        int i = left;
+//        for (int j = mid + 1; j < right; j++) {
+//            while (i <= mid && nums[i] <= 2 * (long) nums[j]) i++;
+//            count += mid - i + 1;
 //        }
-//        int rightV = merge(nums, mid + 1, right);
-//
-//        int mergeV = mergeSort(nums, left, mid, right);
-//        return leftV + rightV + mergeV;
+//        return count;
 //    }
 //
 //    private int mergeSort(int[] nums, int left, int mid, int right) {
 //        int count = 0;
 //
-//        int[] temp = new int[right - left + 1];
-//        int i = 0;
+////        int[] temp = new int[right - left + 1];
+////        int i = 0;
 //        int leftIndex = left;
 //        int rightIndex = mid + 1;
 //
 //        while (leftIndex <= mid && rightIndex <= right) {
-//            if (nums[leftIndex] <= nums[rightIndex]) {
+//            if (nums[leftIndex] < nums[rightIndex]) {
 //                for (int j = mid + 1; j <= right; j++) {
-//                    if (nums[leftIndex] > 2 * nums[j]) {
+//                    if ((long) nums[leftIndex] > 2 * (long) nums[j]) {
 //                        count++;
 //                    }
 //                }
+//                leftIndex++;
+//            } else {
+//                rightIndex++;
 //            }
-//            temp[i++] = nums[leftIndex] < nums[rightIndex] ? nums[leftIndex++] : nums[rightIndex++];
-//
+////            temp[i++] = nums[leftIndex] < nums[rightIndex] ? nums[leftIndex++] : nums[rightIndex++];
 //        }
 //        while (leftIndex <= mid) {
 //            for (int j = mid + 1; j <= right; j++) {
-//                if (nums[leftIndex] > 2 * nums[j]) {
+//                if (nums[leftIndex] > 2 * (long) nums[j]) {
 //                    count++;
 //                }
 //            }
-//            temp[i++] = nums[leftIndex++];
+//            leftIndex++;
+////            temp[i++] = nums[leftIndex++];
 //        }
 //
-//        while (rightIndex <= right) {
-//            temp[i++] = nums[rightIndex++];
-//        }
+////        while (rightIndex <= right) {
+////            temp[i++] = nums[rightIndex++];
+////        }
 //
-//        for (int j = 0; j < temp.length; j++) {
-//            nums[left + j] = temp[j];
-//        }
+////        for (int j = 0; j < temp.length; j++) {
+////            nums[left + j] = temp[j];
+////        }
 //        return count;
 //    }
 //
 //
-////    public int reversePairs(int[] nums) {
+////    public int reversePairs2(int[] nums) {
 ////        int count = 0;
 ////        for (int i = 0; i < nums.length; i++) {
 ////            for (int j = i + 1; j < nums.length; j++) {
-////                if (nums[i] > 2 * nums[j]) {
+////                if ((long) nums[i] > 2 * (long) nums[j]) {
+////                    System.out.println("x" + nums[i] + " j:" + nums[j]);
 ////                    count++;
 ////                }
 ////            }
