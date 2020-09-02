@@ -19,8 +19,34 @@
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
-//    public String longestPalindrome(String s) {
+////    public static void main(String[] args) {
+////        System.out.print(new Solution().longestPalindrome("babad"));
+////    }
 //
+//    public String longestPalindrome(String s) {
+//        int n = s.length();
+//        String ans = "";
+//        boolean[][] dp = new boolean[n][n];
+//        for (int l = 0; l < n; l++) {
+//            for (int i = 0; i + l < n; i++) {
+//                int j = i + l;
+//                if (l == 0) {
+//                    dp[i][j] = true;
+//                } else {
+//                    boolean isSame = s.charAt(i) == s.charAt(j);
+//                    if (l == 1) {
+//                        dp[i][j] = isSame;
+//                    } else {
+//                        dp[i][j] = (isSame && dp[i + 1][j - 1]);
+//                    }
+//                }
+//                if (dp[i][j] && i + l + 1 > ans.length()) {
+//                    ans = s.substring(i, i + l + 1);
+//                }
+//            }
+//        }
+//        return ans;
 //    }
+//
 //}
 ////leetcode submit region end(Prohibit modification and deletion)
