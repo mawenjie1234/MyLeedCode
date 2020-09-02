@@ -42,12 +42,48 @@
 //// 👍 358 👎 0
 //
 //
-//import java.util.List;
+//import java.util.*;
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
-//    public List<Integer> findAnagrams(String s, String p) {
+////    public static void main(String[] args) {
+////        List<Integer> res = new Solution().findAnagrams("abab", "ab");
+////        for (Integer i:  res) {
+////            System.out.print(i);
+////            System.out.print(",");
+////        }
+////    }
 //
+//    public List<Integer> findAnagrams(String s, String p) {
+//        List<Integer> res = new ArrayList<>();
+//        if (s.length() == 0 || p.length() == 0 || p.length() > s.length()) {
+//            return res;
+//        }
+//        int start = 0;
+//        int end = p.length() - 1;
+//        int[] nums = new int[26];
+//        for (int i = 0; i < p.length(); i++) {
+//            char ps = p.charAt(i);
+//            nums[ps - 'a'] += 1;
+//        }
+//        for (; end < s.length(); end++, start++) {
+//             int[] copy = Arrays.copyOf(nums, 26);
+//            for (int i = start; i <= end; i++) {
+//                char is = s.charAt(i);
+//                copy[is - 'a'] -= 1;
+//            }
+//            boolean isSame = true;
+//            for (int i = 0; i < copy.length; i++) {
+//                if(copy[i] != 0) {
+//                    isSame = false;
+//                    break;
+//                }
+//            }
+//            if(isSame) {
+//                res.add(start);
+//            }
+//        }
+//        return res;
 //    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)
