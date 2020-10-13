@@ -1,3 +1,4 @@
+//package com.company.leetcode.editor.cn;
 ////给你一个字符串 s 和一个字符规律 p，请你来实现一个支持 '.' 和 '*' 的正则表达式匹配。
 ////
 //// '.' 匹配任意单个字符
@@ -61,8 +62,94 @@
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
-//    public boolean isMatch(String s, String p) {
 //
+//    public static void main(String[] args) {
+////        System.out.println(new Solution().isMatch("aab", "c*a*b"));
+//        System.out.println(new Solution().isMatch("aa", "*a"));
 //    }
+//
+//    public boolean isMatch(String s, String p) {
+//        int m = s.length();
+//        int n = p.length();
+//        boolean[][] res = new boolean[m + 1][n + 1];
+//        res[0][0] = true;
+//        for (int i = 0; i <= m; i++) {
+//            for (int j = 1; j <= n; j++) {
+//                if (p.charAt(j - 1) == '*') {
+//                    if (j > 1) {
+//                        res[i][j] = res[i][j - 2];
+//                    }else {
+//                        res[i][j] = false;
+//                    }
+//                    if (match(s, p, i, j - 1)) {
+//                        res[i][j] = res[i][j] || res[i - 1][j];
+//                    }
+//                } else {
+//                    res[i][j] = match(s, p, i, j) && res[i - 1][j - 1];
+//                }
+//            }
+//        }
+//        return res[m][n];
+//    }
+//
+//    private boolean match(String s, String p, int i, int j) {
+//        if (i == 0) {
+//            return false;
+//        }
+//        if(j == 0) {
+//            return false;
+//        }
+//        if (p.charAt(j - 1) == '.') {
+//            return true;
+//        }
+//        return s.charAt(i - 1) == p.charAt(j - 1);
+//    }
+//
+//
+//    /**
+//     * 状态转移方程
+//     * p[j] != '*'  res[i][j] = match(i,j) && res[i-1][j-1]
+//     *
+//     * p[j] == '*'
+//     *     if match(i,j) res[i][j] = res[i-1][j] || res[i][j]
+//     *     else  res[i][j] = res[i][j-2], p不匹配，将p的字母加*组合都去掉
+//     *
+//     * @param s
+//     * @param p
+//     * @return
+//     */
+////    public boolean isMatch(String s, String p) {
+////        int m = s.length();
+////        int n = p.length();
+////        boolean[][] res = new boolean[m + 1][n + 1];
+////        res[0][0] = true;
+////        for (int i = 0; i <= m; i++) {
+////            for (int j = 1; j <= n; j++) {
+////                if (p.charAt(j - 1) == '*') {
+////                    res[i][j] = res[i][j - 2];
+////                    if (match(s, p, i, j - 1)) {
+////                        res[i][j] = res[i][j] || res[i - 1][j];
+////                    }
+////                } else {
+////                    res[i][j] = match(s, p, i, j) && res[i - 1][j - 1];
+////                }
+////            }
+////        }
+////        return res[m][n];
+////    }
+////
+////    /**
+////     * 第 j 个是. 就一定相等
+////     * 判断 i j 是否相同
+////     */
+////    private boolean match(String s, String p, int i, int j) {
+////        if (i == 0) {
+////            return false;
+////        }
+////        if (p.charAt(j - 1) == '.') {
+////            return true;
+////        }
+////        return s.charAt(i - 1) == p.charAt(j - 1);
+////    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)
