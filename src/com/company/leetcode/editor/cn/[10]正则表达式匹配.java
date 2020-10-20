@@ -68,40 +68,96 @@
 //        System.out.println(new Solution().isMatch("aa", "*a"));
 //    }
 //
+//
+//    /**
+//     *
+//     * @param s
+//     * @param p
+//     * @return
+//     *
+//     * 构造一个二维表，一般两个字符串都是这样，
+//     * (m + 1) * (n + 1) 表示第n个位置是否可以匹配
+//     * 00 表示两个都没有选择，所以是true
+//     * 0* 表示s没有选择，无论p有多少个，都没有用，都是false
+//     * 只要p是 '.' 就表示可以随意个，所以无论如何都返回true
+//     *
+//     * if('*') 表示当前和前一个可以是0个和无穷个，所以这两个可以直接放弃， ij 第一层就可以从前面 j-2 赋值
+//     *
+//     *然后判断 是否相同，来判断*之前的是否有相同，
+//     *
+//     */
 //    public boolean isMatch(String s, String p) {
 //        int m = s.length();
 //        int n = p.length();
-//        boolean res[][] = new boolean[m + 1][n + 1];
+//        boolean[][] res = new boolean[m + 1][n + 1];
 //        res[0][0] = true;
 //        for (int i = 0; i <= m; i++) {
 //            for (int j = 1; j <= n; j++) {
 //                if (p.charAt(j - 1) == '*') {
 //                    if (j > 1) {
 //                        res[i][j] = res[i][j - 2];
-//                    }else {
+//                    } else {
 //                        res[i][j] = false;
-//                        continue;
 //                    }
 //                    if (match(s, p, i, j - 1)) {
 //                        res[i][j] = res[i][j] || res[i - 1][j];
 //                    }
+//
 //                } else {
 //                    res[i][j] = match(s, p, i, j) && res[i - 1][j - 1];
 //                }
 //            }
 //        }
+//
+//
 //        return res[m][n];
 //    }
 //
-//    private boolean match(String s, String p, int i, int j) {
-//        if (i == 0 || j == 0) {
+//    private boolean match(String s, String p, int sIndex, int pIndex) {
+//        if (sIndex == 0 || pIndex == 0) {
 //            return false;
 //        }
-//        if (p.charAt(j - 1) == '.') {
+//        if (p.charAt(pIndex - 1) == '.') {
 //            return true;
 //        }
-//        return s.charAt(i - 1) == p.charAt(j - 1);
+//        return s.charAt(sIndex - 1) == p.charAt(pIndex - 1);
 //    }
+//
+//
+////    public boolean isMatch(String s, String p) {
+////        int m = s.length();
+////        int n = p.length();
+////        boolean res[][] = new boolean[m + 1][n + 1];
+////        res[0][0] = true;
+////        for (int i = 0; i <= m; i++) {
+////            for (int j = 1; j <= n; j++) {
+////                if (p.charAt(j - 1) == '*') {
+////                    if (j > 1) {
+////                        res[i][j] = res[i][j - 2];
+////                    }else {
+////                        res[i][j] = false;
+////                        continue;
+////                    }
+////                    if (match(s, p, i, j - 1)) {
+////                        res[i][j] = res[i][j] || res[i - 1][j];
+////                    }
+////                } else {
+////                    res[i][j] = match(s, p, i, j) && res[i - 1][j - 1];
+////                }
+////            }
+////        }
+////        return res[m][n];
+////    }
+////
+////    private boolean match(String s, String p, int i, int j) {
+////        if (i == 0 || j == 0) {
+////            return false;
+////        }
+////        if (p.charAt(j - 1) == '.') {
+////            return true;
+////        }
+////        return s.charAt(i - 1) == p.charAt(j - 1);
+////    }
 //
 //
 ////    public boolean isMatch(String s, String p) {
