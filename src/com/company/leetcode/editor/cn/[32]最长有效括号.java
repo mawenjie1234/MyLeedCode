@@ -1,4 +1,5 @@
-//package com.company.leetcode.editor.cn;//给定一个只包含 '(' 和 ')' 的字符串，找出最长的包含有效括号的子串的长度。
+//package com.company.leetcode.editor.cn;
+////给定一个只包含 '(' 和 ')' 的字符串，找出最长的包含有效括号的子串的长度。
 ////
 //// 示例 1:
 ////
@@ -20,6 +21,7 @@
 //import java.util.Deque;
 //import java.util.LinkedList;
 //import java.util.Queue;
+//import java.util.Stack;
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
@@ -27,15 +29,32 @@
 ////
 ////    }
 //
-////    public static void main(String[] args) {
+//    public static void main(String[] args) {
 ////        System.out.println(new Solution().longestValidParentheses("()()"));
-////        System.out.println(new Solution().longestValidParentheses(")()())"));
-////        System.out.println(new Solution().longestValidParentheses("()(()"));
-////    }
+//        System.out.println(new Solution().longestValidParentheses1("()()"));
 //
-////    public int longestValidParentheses(String s) {
-////
-////    }
+//        System.out.println(new Solution().longestValidParentheses1(")()())"));
+//        System.out.println(new Solution().longestValidParentheses1("()(()"));
+//    }
+//
+//    public int longestValidParentheses1(String s) {
+//        int max = 0;
+//        Deque<Integer> stack = new LinkedList<Integer>();
+//        stack.add(-1);
+//        for (int i = 0; i < s.length(); i++) {
+//            if(s.charAt(i) == '(') {
+//                stack.push(i);
+//            }else {
+//                stack.pop();
+//                if(stack.isEmpty()) {
+//                    stack.push(i);
+//                }else {
+//                    max = Math.max(max, i - stack.peek());
+//                }
+//            }
+//        }
+//        return max;
+//    }
 //
 //
 //    public int longestValidParentheses(String s) {

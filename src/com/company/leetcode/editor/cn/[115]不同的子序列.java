@@ -55,45 +55,77 @@
 //    //
 //
 //
-//    private int count = 0;
-//
-//    public static void main(String[] args) {
-//        System.out.println(new Solution().numDistinct("rabbbit", "rabbit"));
-//    }
+////    public static void main(String[] args) {
+////        System.out.println(new Solution().numDistinct("rabbbit", "rabbit"));
+////        System.out.println(new Solution().numDistinct("babgbag", "bag"));
+////
+////    }
 //
 //    public int numDistinct(String s, String t) {
-//        dfs(s, t, "", 0, 0);
-//        return count;
+//
 //    }
 //
-//    private void dfs(String s, String t, String currentS, int sIndex, int tIndex) {
-//        // terminal
-//        if (tIndex == t.length()) {
-//            if (currentS.equals(t)) {
-//                count++;
-//            }
-//            return;
-//        }
-//        if(sIndex >= s.length()) {
-//            return;
-//        }
-//        // progress
-//        // 检查字符串是否相同
-//        for (int i = 0; i < currentS.length(); i++) {
-//            if (currentS.charAt(i) != t.charAt(i)) {
-//                return;
-//            }
-//        }
-////        for (int i = tIndex + 1; i < t.length(); i++) {
-//        // 选择
-//        dfs(s, t, currentS + s.charAt(sIndex), sIndex + 1, tIndex + 1);
-//        // 不选择
-//        dfs(s, t, currentS, sIndex + 1, tIndex);
+//
+////    public int numDistinct(String s, String t) {
+////        int m = s.length();
+////        int n = t.length();
+////        int[][] res = new int[m + 1][n + 1];
+////        for (int i = 0; i <= m; i++) {
+////            res[i][0] = 1;
 ////        }
-//        // down
+////        // s 从1 开始是因为不论t怎么选择，s是空字符串，那么都没有用
+////        for (int i = 1; i <= m; i++) {
+////            // t 从1开始是：由于j=0 肯定不论s怎么变化，都是子集，上面已经赋值1
+////            for (int j = 1; j <= n; j++) {
+////                if (s.charAt(i - 1) == t.charAt(j - 1)) {
+////                    // 当前相同
+////                    res[i][j] = res[i - 1][j - 1] + res[i-1][j];
+////                } else {
+////                    // 当前不同
+////                    res[i][j] = res[i-1][j];
+////                }
+////            }
+////        }
+////        return res[m][n];
+////
+////    }
 //
-//        // recover
-//    }
+//
+//    // 超出时间限制
+////    private int count = 0;
+////    public int numDistinct(String s, String t) {
+////        dfs(s, t, "", 0, 0);
+////        return count;
+////    }
+////
+////    private void dfs(String s, String t, String currentS, int sIndex, int tIndex) {
+////        // terminal
+////        if (tIndex == t.length()) {
+////            if (currentS.equals(t)) {
+////                count++;
+////            }
+////            return;
+////        }
+////        if(sIndex >= s.length()) {
+////            return;
+////        }
+////        // progress
+////        // 检查字符串是否相同
+////        for (int i = 0; i < currentS.length(); i++) {
+////            if (currentS.charAt(i) != t.charAt(i)) {
+////                return;
+////            }
+////        }
+//////        for (int i = tIndex + 1; i < t.length(); i++) {
+////        // 选择
+////        dfs(s, t, currentS + s.charAt(sIndex), sIndex + 1, tIndex + 1);
+////        // 不选择
+////        dfs(s, t, currentS, sIndex + 1, tIndex);
+//////        }
+////        // down
+////
+////        // recover
+////    }
 //
 //
 //}
