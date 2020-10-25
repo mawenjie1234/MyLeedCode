@@ -29,53 +29,80 @@
 ////
 ////    }
 //
-//    public static void main(String[] args) {
+////    public static void main(String[] args) {
+//////        System.out.println(new Solution().longestValidParentheses("()()"));
 ////        System.out.println(new Solution().longestValidParentheses("()()"));
-//        System.out.println(new Solution().longestValidParentheses1("()()"));
-//
-//        System.out.println(new Solution().longestValidParentheses1(")()())"));
-//        System.out.println(new Solution().longestValidParentheses1("()(()"));
-//    }
-//
-//    public int longestValidParentheses1(String s) {
-//        int max = 0;
-//        Deque<Integer> stack = new LinkedList<Integer>();
-//        stack.add(-1);
-//        for (int i = 0; i < s.length(); i++) {
-//            if(s.charAt(i) == '(') {
-//                stack.push(i);
-//            }else {
-//                stack.pop();
-//                if(stack.isEmpty()) {
-//                    stack.push(i);
-//                }else {
-//                    max = Math.max(max, i - stack.peek());
-//                }
-//            }
-//        }
-//        return max;
-//    }
+////
+////        System.out.println(new Solution().longestValidParentheses(")()())"));
+////        System.out.println(new Solution().longestValidParentheses("()(()"));
+////    }
 //
 //
+//    /**
+//     * @param s
+//     * @return dp 的算法, dp[i]  表示当前最大有多少个有效括号
+//     * s[i] == ')' 那么就去检查之前是否有 （ 与之匹配
+//     * 1 前一个是 '(' 那么 dp[i] = dp[i-2]  + 2;
+//     * 2 前一个不是 '(' 有可能  (()')', 前3个是'(',  dp[i-1] 表示的是 （'(')） 第二个位置，
+//     * 所以index = [i- dp[i-1] -1]表示第一个'(' 的位置，那么就检查s(index) 是不是'('
+//     * 如果是, 那么 dp[i] = dp[i-1] + dp[第一个括号之前] + 2
+//     * = dp[i-1] + dp[i-dp[i-1] -2] +2
+//     */
 //    public int longestValidParentheses(String s) {
 //        int max = 0;
-//        Deque<Integer> stack = new LinkedList<>();
-//        stack.add(-1);
-//        for (int i = 0; i < s.length(); i++) {
-//            if (s.charAt(i) == '(') {
-//                stack.push(i);
-//            } else {
-//                stack.pop();
-//                if (stack.isEmpty()) {
-//                    stack.push(i);
-//                } else {
-//                    max = Math.max(max, i - stack.peek());
+//        int[] dp = new int[s.length()];
+//        for (int i = 1; i < s.length(); i++) {
+//            if (s.charAt(i) == ')') {
+//                if (s.charAt(i - 1) == '(') {
+//                    dp[i] = (i > 1 ? dp[i - 2] : 0) + 2;
+//                } else if (i - dp[i - 1] > 0 && s.charAt(i - dp[i - 1] - 1) == '(') {
+//                    dp[i] = dp[i - 1] + (i - dp[i - 1] >= 2 ? dp[i - dp[i - 1] - 2] : 0) + 2;
 //                }
+//                max = Math.max(max, dp[i]);
 //            }
 //        }
-//
 //        return max;
 //    }
+//
+////    public int longestValidParentheses1(String s) {
+////        int max = 0;
+////        Deque<Integer> stack = new LinkedList<Integer>();
+////        stack.add(-1);
+////        for (int i = 0; i < s.length(); i++) {
+////            if(s.charAt(i) == '(') {
+////                stack.push(i);
+////            }else {
+////                stack.pop();
+////                if(stack.isEmpty()) {
+////                    stack.push(i);
+////                }else {
+////                    max = Math.max(max, i - stack.peek());
+////                }
+////            }
+////        }
+////        return max;
+////    }
+////
+////
+////    public int longestValidParentheses(String s) {
+////        int max = 0;
+////        Deque<Integer> stack = new LinkedList<>();
+////        stack.add(-1);
+////        for (int i = 0; i < s.length(); i++) {
+////            if (s.charAt(i) == '(') {
+////                stack.push(i);
+////            } else {
+////                stack.pop();
+////                if (stack.isEmpty()) {
+////                    stack.push(i);
+////                } else {
+////                    max = Math.max(max, i - stack.peek());
+////                }
+////            }
+////        }
+////
+////        return max;
+////    }
 //
 //
 ////    public int longestValidParentheses(String s) {
