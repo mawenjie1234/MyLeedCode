@@ -45,19 +45,47 @@
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
 //
-////    public static void main(String[] args) {
-////        int[] prices = {7,1,5,3,6,4};
-////        System.out.println(new Solution().maxProfit(prices));
-////    }
-//
-//    public int maxProfit(int[] prices) {
-//        int maxCount = 0;
-//        for (int i = 1; i < prices.length; i++) {
-//            if(prices[i] > prices[i -1]) {
-//                maxCount += prices[i] - prices[i-1];
-//            }
-//        }
-//        return maxCount;
+//    public static void main(String[] args) {
+//        int[] prices = {7,1,5,3,6,4};
+//        System.out.println(new Solution().maxProfit1(prices));
 //    }
+//
+//    public int maxProfit1(int[] prices) {
+//        int i_0 = 0;
+//        int i_1 = Integer.MIN_VALUE; // 关键点
+//        for (int i = 0; i < prices.length; i++) {
+//            int temp = i_0;
+//            i_0 = Math.max(temp, i_1 + prices[i]);
+//            i_1 = Math.max(i_1, temp - prices[i]);
+//        }
+//        return i_0;
+////        dp[i][0] = Math.max(dp[i-1][0] , dp[i-1][1] + prices[i]);
+////        dp[i][1] = Math.max(dp[i-1][1], dp[i-1][0] - prices[i]);
+//    }
+////    dp[i][1][0] = max(dp[i-1][1][0], dp[i-1][1][1] + prices[i])
+////    dp[i][1][1] = max(dp[i-1][1][1], dp[i-1][0][0] - prices[i])
+////            = max(dp[i-1][1][1], -prices[i])
+////    解释：k = 0 的 base case，所以 dp[i-1][0][0] = 0。
+////
+////    现在发现 k 都是 1，不会改变，即 k 对状态转移已经没有影响了。
+////    可以进行进一步化简去掉所有 k：
+////    dp[i][0] = max(dp[i-1][0], dp[i-1][1] + prices[i])
+////    dp[i][1] = max(dp[i-1][1], -prices[i])
+////
+////    作者：labuladong
+////    链接：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/solution/yi-ge-tong-yong-fang-fa-tuan-mie-6-dao-gu-piao-wen/
+////    来源：力扣（LeetCode）
+////    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+//
+//
+////    public int maxProfit(int[] prices) {
+////        int maxCount = 0;
+////        for (int i = 1; i < prices.length; i++) {
+////            if(prices[i] > prices[i -1]) {
+////                maxCount += prices[i] - prices[i-1];
+////            }
+////        }
+////        return maxCount;
+////    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)
