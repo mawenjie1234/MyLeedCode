@@ -39,27 +39,44 @@
 ////    public static void main(String[] args) {
 ////        int[] prices = {3, 3, 5, 0, 0, 3, 1, 4};
 ////        System.out.println(new Solution().maxProfit(prices));
+////
+////        int[] prices1 = {1, 2, 3, 4, 5};
+////        System.out.println(new Solution().maxProfit(prices1));
 ////    }
+//
+////    public int maxProfit(int[] prices) {
+////        int dp_i10 = 0, dp_i11 = Integer.MIN_VALUE;
+////        int dp_i20 = 0, dp_i21 = Integer.MIN_VALUE;
+////        for (int price : prices) {
+////            dp_i20 = Math.max(dp_i20, dp_i21 + price);
+////            dp_i21 = Math.max(dp_i21, dp_i10 - price);
+////            dp_i10 = Math.max(dp_i10, dp_i11 + price);
+////            dp_i11 = Math.max(dp_i11, -price);
+////        }
+////        return dp_i20;
+////    }
+//
 //
 //    public int maxProfit(int[] prices) {
 //        int n = prices.length;
-//        int k = 2;
-//        int[][][] dp = new int[n][k + 1][2];
+//        if (n <= 1) {
+//            return 0;
+//        }
+//        int maxK = 2;
+//        int[][][] dp = new int[n][maxK + 1][2];
 //        for (int i = 0; i < n; i++) {
-//            for (int j = k; j > 0; j--) {
-//                if(i == 0) {
-////                    dp[0][1][0] = Integer.MIN_VALUE;
-//                    dp[0][1][1] = - prices[0];
-//                    dp[0][0][0] = 0;
-////                    dp[0][0][1] = Integer.MIN_VALUE;
+//            for (int k = maxK; k > 0; k--) {
+//                if (i == 0) {
+//                    dp[i][k][0] = 0;
+//                    dp[i][k][1] = -prices[0];
 //                    continue;
 //                }
-//                dp[i][j][0] = Math.max(dp[i - 1][j][0], dp[i - 1][j][1] + prices[i]);
-//                dp[i][j][1] = Math.max(dp[i - 1][j][1], dp[i - 1][j - 1][0] - prices[i]);
+//
+//                dp[i][k][0] = Math.max(dp[i - 1][k][0], dp[i - 1][k][1] + prices[i]);
+//                dp[i][k][1] = Math.max(dp[i - 1][k][1], dp[i - 1][k - 1][0] - prices[i]);
 //            }
 //        }
-//
-//        return dp[n - 1][k][0];
+//        return dp[n - 1][maxK][0];
 //    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)
