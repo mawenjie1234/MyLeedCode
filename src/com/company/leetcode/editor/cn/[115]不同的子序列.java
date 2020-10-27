@@ -55,14 +55,50 @@
 //    //
 //
 //
-////    public static void main(String[] args) {
-////        System.out.println(new Solution().numDistinct("rabbbit", "rabbit"));
-////        System.out.println(new Solution().numDistinct("babgbag", "bag"));
+//    public static void main(String[] args) {
+//        System.out.println(new Solution().numDistinct("rabbbit", "rabbit"));
+//        System.out.println(new Solution().numDistinct("babgbag", "bag"));
+//
+//    }
+//
+////    public int numDistinct(String s, String t) {
 ////
 ////    }
 //
+//    /**
+//     * 动态规划方式
+//     * 两个字符串 dp[s][t], 表示dp[i][j] 当前有多少字符本身是匹配的，这样dp[m][n] 就是总计有多少了
+//     * <p>
+//     * s[i] == t[j], 两个字符串相同，可以是s 和t前一个都相同，和 s-1 和 当前的t相同，这两个相加，就是当前的个数
+//     * dp[i][j] = dp[i-1][j-1] + dp[s-1][t]
+//     * <p>
+//     * s[i] != t[j] 两个字符串当前不相同，那有可能s的前一个和t相同，所以
+//     * dp[i][j] = dp[i-1][j]
+//     * <p>
+//     * s[0][j] s没有，无论t咋变，都是0
+//     * s[i][0] s随便变， t都是0， 那么都算匹配 1
+//     *
+//     * @param s
+//     * @param t
+//     * @return
+//     */
 //    public int numDistinct(String s, String t) {
-//
+//        int m = s.length();
+//        int n = t.length();
+//        int[][] dp = new int[m + 1][n + 1];
+//        for (int i = 0; i <= m; i++) {
+//            dp[i][0] = 1;
+//        }
+//        for (int i = 1; i <= m; i++) {
+//            for (int j = 1; j <= n; j++) {
+//                if (s.charAt(i - 1) == t.charAt(j - 1)) {
+//                    dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j];
+//                } else {
+//                    dp[i][j] = dp[i - 1][j];
+//                }
+//            }
+//        }
+//        return dp[m][n];
 //    }
 //
 //
