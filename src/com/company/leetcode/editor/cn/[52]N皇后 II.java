@@ -1,4 +1,5 @@
-//package com.company.leetcode.editor.cn;//n 皇后问题研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。
+//package com.company.leetcode.editor.cn;
+////n 皇后问题研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。
 ////
 ////
 ////
@@ -42,28 +43,55 @@
 //        System.out.println(new Solution().totalNQueens(4));
 //    }
 //
-//    int count;
+//    int count = 0;
 //
 //    public int totalNQueens(int n) {
-//        if (n < 1) {
+//        if (n <= 1) {
 //            return 0;
 //        }
-//        count = 0;
 //        dfs(n, 0, 0, 0, 0);
 //        return count;
 //    }
 //
-//    private void dfs(int n, int row, int column, int pie, int na) {
+//    private void dfs(int n, int row, int col, int pie, int na) {
+//        // termination
 //        if (row >= n) {
 //            count++;
 //            return;
 //        }
-//        int bits = (~(column | pie | na)) & ((1 << n) - 1);
+//        // process current logic
+//        int bits = (~(col | pie | na) & (1 << n) - 1); // 得到所有的空位置 , 可以放皇后的地方写1
+//        // drill down
 //        while (bits != 0) {
-//            int p = bits & -bits;
-//            bits = bits & (bits - 1);
-//            dfs(n, row + 1, column | p, (pie | p) << 1, (na | p) >> 1);
+//            int p = bits & -bits; // 取得最低位置的1
+//            bits = bits & (bits - 1); // 表示p 位置放上皇后, 清最低位的1
+//            dfs(n, row + 1, col | p, (pie | p) << 1, (na | p) >> 1);
 //        }
+//
+//        //restore current states
 //    }
+//
+////    int count;
+////    public int totalNQueens(int n) {
+////        if (n < 1) {
+////            return 0;
+////        }
+////        count = 0;
+////        dfs(n, 0, 0, 0, 0);
+////        return count;
+////    }
+////
+////    private void dfs(int n, int row, int column, int pie, int na) {
+////        if (row >= n) {
+////            count++;
+////            return;
+////        }
+////        int bits = (~(column | pie | na)) & ((1 << n) - 1);
+////        while (bits != 0) {
+////            int p = bits & -bits;
+////            bits = bits & (bits - 1);
+////            dfs(n, row + 1, column | p, (pie | p) << 1, (na | p) >> 1);
+////        }
+////    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)

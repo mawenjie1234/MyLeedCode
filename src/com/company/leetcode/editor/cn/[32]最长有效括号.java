@@ -37,6 +37,32 @@
 ////        System.out.println(new Solution().longestValidParentheses("()(()"));
 ////    }
 //
+//    /**
+//     * dp 方法
+//     * dp[i] 表示第i个有效括号是多少个
+//     * s[i] == ')'
+//     * 检查前一个是否是'(' 如果是，那么 dp[i] = dp[i-2] + 2
+//     * 不是，检查前 dp[i - dp[i-1] -1]
+//     *
+//     * @param s
+//     * @return
+//     */
+//    public int longestValidParentheses(String s) {
+//        int n = s.length();
+//        int max = 0;
+//        int[] dp = new int[n];
+//        for (int i = 1; i < n; i++) {
+//            if (s.charAt(i) == ')') {
+//                if (s.charAt(i - 1) == '(') {
+//                    dp[i] = (i > 1 ? dp[i - 2] : 0) + 2;
+//                } else if (i - dp[i - 1] >= 1 && s.charAt(i - dp[i - 1] - 1) == '(') {
+//                    dp[i] = dp[i - 1] + (i - dp[i - 1] >= 2 ? dp[i - dp[i - 1] - 2] : 0) + 2;
+//                }
+//                max = Math.max(max, dp[i]);
+//            }
+//        }
+//        return max;
+//    }
 //
 //    /**
 //     * @param s
@@ -48,21 +74,21 @@
 //     * 如果是, 那么 dp[i] = dp[i-1] + dp[第一个括号之前] + 2
 //     * = dp[i-1] + dp[i-dp[i-1] -2] +2
 //     */
-//    public int longestValidParentheses(String s) {
-//        int max = 0;
-//        int[] dp = new int[s.length()];
-//        for (int i = 1; i < s.length(); i++) {
-//            if (s.charAt(i) == ')') {
-//                if (s.charAt(i - 1) == '(') {
-//                    dp[i] = (i > 1 ? dp[i - 2] : 0) + 2;
-//                } else if (i - dp[i - 1] > 0 && s.charAt(i - dp[i - 1] - 1) == '(') {
-//                    dp[i] = dp[i - 1] + (i - dp[i - 1] >= 2 ? dp[i - dp[i - 1] - 2] : 0) + 2;
-//                }
-//                max = Math.max(max, dp[i]);
-//            }
-//        }
-//        return max;
-//    }
+////    public int longestValidParentheses(String s) {
+////        int max = 0;
+////        int[] dp = new int[s.length()];
+////        for (int i = 1; i < s.length(); i++) {
+////            if (s.charAt(i) == ')') {
+////                if (s.charAt(i - 1) == '(') {
+////                    dp[i] = (i > 1 ? dp[i - 2] : 0) + 2;
+////                } else if (i - dp[i - 1] > 0 && s.charAt(i - dp[i - 1] - 1) == '(') {
+////                    dp[i] = dp[i - 1] + (i - dp[i - 1] >= 2 ? dp[i - dp[i - 1] - 2] : 0) + 2;
+////                }
+////                max = Math.max(max, dp[i]);
+////            }
+////        }
+////        return max;
+////    }
 //
 ////    public int longestValidParentheses1(String s) {
 ////        int max = 0;
