@@ -62,47 +62,75 @@
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
 //    public static void main(String[] args) {
-//        System.out.println(new Solution().isMatch("aa", "a"));
+////        System.out.println(new Solution().isMatch("aa", "a"));
 //        System.out.println(new Solution().isMatch("adceb", "*a*b"));
 //        System.out.println(new Solution().isMatch("acdcb", "a*c?b"));
-//        System.out.println(new Solution().isMatch("", "******"));
+////        System.out.println(new Solution().isMatch("", "******"));
 //    }
 //
 ////    public boolean isMatch(String s, String p) {
 ////
 ////    }
 //
-//
-//    // 动态规划
-//    //
+//    // '?' 可以匹配任何单个字符。
+//    //'*' 可以匹配任意字符串（包括空字符串）。
 //    public boolean isMatch(String s, String p) {
 //        int m = s.length();
 //        int n = p.length();
-//        boolean[][] res = new boolean[m + 1][n + 1];
-//        res[0][0] = true;
-//        // 匹配p的前 i 个 '*'
+//        boolean[][] dp = new boolean[m + 1][n + 1];
+//        dp[0][0] = true;
 //        for (int i = 1; i <= n; i++) {
 //            if (p.charAt(i - 1) == '*') {
-//                res[0][i] = true;
+//                dp[0][i] = true;
 //            } else {
 //                break;
 //            }
 //        }
-//
 //        for (int i = 1; i <= m; i++) {
 //            for (int j = 1; j <= n; j++) {
+//                // p 是 * 需要匹配0~无穷个
 //                if (p.charAt(j - 1) == '*') {
-//                    // 选择0个 '*' j 选择了，所以i -1
-//                    // 选择n个 '*' j 没有选择，需要跳过j 所以j -1
-//                    res[i][j] = res[i-1][j] || res[i][j-1];
-//                } else if(p.charAt(j-1) == '?' || s.charAt(i-1) == p.charAt(j-1)){
-//                    res[i][j] = res[i - 1][j - 1];
+//                    dp[i][j] = dp[i-1][j] | dp[i][j-1];
+//                } else if (p.charAt(j - 1) == '?' || p.charAt(j - 1) == s.charAt(i - 1)) {
+//                    dp[i][j] = dp[i-1][j-1];
 //                }
 //            }
 //        }
 //
-//        return res[m][n];
+//        return dp[m][n];
 //    }
+//
+//
+//    // 动态规划
+//    //
+////    public boolean isMatch(String s, String p) {
+////        int m = s.length();
+////        int n = p.length();
+////        boolean[][] res = new boolean[m + 1][n + 1];
+////        res[0][0] = true;
+////        // 匹配p的前 i 个 '*'
+////        for (int i = 1; i <= n; i++) {
+////            if (p.charAt(i - 1) == '*') {
+////                res[0][i] = true;
+////            } else {
+////                break;
+////            }
+////        }
+////
+////        for (int i = 1; i <= m; i++) {
+////            for (int j = 1; j <= n; j++) {
+////                if (p.charAt(j - 1) == '*') {
+////                    // 选择0个 '*' j 选择了，所以i -1
+////                    // 选择n个 '*' j 没有选择，需要跳过j 所以j -1
+////                    res[i][j] = res[i-1][j] || res[i][j-1];
+////                } else if(p.charAt(j-1) == '?' || s.charAt(i-1) == p.charAt(j-1)){
+////                    res[i][j] = res[i - 1][j - 1];
+////                }
+////            }
+////        }
+////
+////        return res[m][n];
+////    }
 //
 //
 //    // 递归，深度优先搜索，
