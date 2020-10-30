@@ -35,30 +35,30 @@
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
-////    public static void main(String[] args) {
-////        int[] nums = {2,7,9,3,1};
-////        System.out.println(new Solution().rob(nums));
-////    }
-//
-//    public int rob(int[] nums) {
-//        if(nums == null || nums.length == 0) {
-//            return 0;
-//        }
-//        if(nums.length == 1) {
-//            return nums[0];
-//        }
-//        int n = nums.length;
-//        int last = nums[0];
-//        int cur = Math.max(nums[0], nums[1]);
-//        int max = cur;
-//        for (int i = 2; i < n; i++) {
-//            int temp = Math.max(cur, last + nums[i]);
-//            last = cur;
-//            cur = temp;
-//            max = Math.max(max, cur);
-//        }
-//        return max;
+//    public static void main(String[] args) {
+//        int[] nums = {2,7,9,3,1};
+//        System.out.println(new Solution().rob(nums));
 //    }
+//
+////    public int rob(int[] nums) {
+////        if(nums == null || nums.length == 0) {
+////            return 0;
+////        }
+////        if(nums.length == 1) {
+////            return nums[0];
+////        }
+////        int n = nums.length;
+////        int last = nums[0];
+////        int cur = Math.max(nums[0], nums[1]);
+////        int max = cur;
+////        for (int i = 2; i < n; i++) {
+////            int temp = Math.max(cur, last + nums[i]);
+////            last = cur;
+////            cur = temp;
+////            max = Math.max(max, cur);
+////        }
+////        return max;
+////    }
 //
 //
 ////    public int rob(int[] nums) {
@@ -81,24 +81,24 @@
 ////    }
 //
 //
-////    public int rob(int[] nums) {
-////        if (nums == null || nums.length == 0) {
-////            return 0;
-////        }
-////        if (nums.length == 1) {
-////            return nums[0];
-////        }
-////        int n = nums.length;
-////        int[][] value = new int[n][2];
-////        value[0][0] = 0;
-////        value[0][1] = nums[0];
-////        // 0 不偷， 1 偷
-////        for (int i = 1; i < n; i++) {
-////            value[i][0] = Math.max(value[i - 1][1], value[i - 1][0]);
-////            value[i][1] = value[i-1][0] + nums[i];
-////        }
-////
-////        return Math.max(value[n - 1][0], value[n - 1][1]);
-////    }
+//    public int rob(int[] nums) {
+//        if (nums == null || nums.length == 0) {
+//            return 0;
+//        }
+//        if (nums.length == 1) {
+//            return nums[0];
+//        }
+//        int n = nums.length;
+//        int[][] value = new int[n][2];
+//        value[0][0] = 0;
+//        value[0][1] = nums[0];
+//        // 0 不偷， 1 偷
+//        for (int i = 1; i < n; i++) {
+//            value[i][0] = Math.max(value[i - 1][1], value[i - 1][0]);
+//            value[i][1] = value[i-1][0] + nums[i];
+//        }
+//
+//        return Math.max(value[n - 1][0], value[n - 1][1]);
+//    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)
