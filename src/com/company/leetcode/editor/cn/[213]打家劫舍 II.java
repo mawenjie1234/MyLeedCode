@@ -74,14 +74,20 @@
 //
 //    public int robN(int[] nums, int start, int end) {
 //        int n = end - start;
-//        int[][] dp = new int[n][2];
-//        dp[0][0] = 0;
-//        dp[0][1] = nums[start];
+////        int[][] dp = new int[n][2];
+////        dp[0][0] = 0;
+////        dp[0][1] = nums[start];
+//        int i0 = 0;
+//        int i1 = nums[start];
 //        for (int i = 1; i < n; i++) {
-//            dp[i][0] = Math.max(dp[i - 1][1], dp[i - 1][0]);
-//            dp[i][1] = dp[i - 1][0] + nums[start + i];
+//            int i0Temp = i0;
+////            dp[i][0] = Math.max(dp[i - 1][1], dp[i - 1][0]);
+//            i0 = Math.max(i1, i0Temp);
+////            dp[i][1] = dp[i - 1][0] + nums[start + i];
+//            i1 = i0Temp + nums[start + i];
 //        }
-//        return Math.max(dp[n - 1][0], dp[n - 1][1]);
+//        return Math.max(i0, i1);
+////        return Math.max(dp[n - 1][0], dp[n - 1][1]);
 //    }
 //
 //}
