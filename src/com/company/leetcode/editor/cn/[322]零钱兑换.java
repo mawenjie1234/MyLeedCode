@@ -29,42 +29,58 @@
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
 //    public static void main(String[] args) {
-//        int[] coins = new int[]{1,2,5};
-//        System.out.println(new Solution().coinChange(coins, 11));
+//        //ystem.out.println(new Solution().coinChange(new int[] {1,2,5}, 11));
+//        System.out.println(new Solution().coinChange(new int[] {2}, 3));
 //    }
 //
 ////    public int coinChange(int[] coins, int amount) {
 ////
 ////    }
 //
-//
 //    public int coinChange(int[] coins, int amount) {
-//        if (amount < 1) {
-//            return 0;
+//        int[] dp = new int[amount + 1];
+//        dp[0] = 0;
+//        for (int i = 1; i <= amount; i++) {
+//            int min = amount + 1;
+//            for (int j = 0; j < coins.length; j++) {
+//                int before = i - coins[j];
+//                if(before >= 0) {
+//                    min = Math.min(min, dp[i - coins[j]] + 1);
+//                }
+//            }
+//            dp[i] = min;
 //        }
-//        return coinChange(coins, amount, new int[amount]);
+//        return dp[amount] > amount ? -1 : dp[amount];
 //    }
 //
-//    private int coinChange(int[] coins, int rem, int[] count) {
-//        if (rem < 0) {
-//            return -1;
-//        }
-//        if (rem == 0) {
-//            return 0;
-//        }
-//        if (count[rem - 1] != 0) {
-//            return count[rem - 1];
-//        }
-//        int min = Integer.MAX_VALUE;
-//        for (int coin : coins) {
-//            int res = coinChange(coins, rem - coin, count);
-//            if (res >= 0 && res < min) {
-//                min = 1 + res;
-//            }
-//        }
-//        count[rem - 1] = (min == Integer.MAX_VALUE) ? -1 : min;
-//        return count[rem - 1];
-//    }
+//
+////    public int coinChange(int[] coins, int amount) {
+////        if (amount < 1) {
+////            return 0;
+////        }
+////        return coinChange(coins, amount, new int[amount]);
+////    }
+////
+////    private int coinChange(int[] coins, int rem, int[] count) {
+////        if (rem < 0) {
+////            return -1;
+////        }
+////        if (rem == 0) {
+////            return 0;
+////        }
+////        if (count[rem - 1] != 0) {
+////            return count[rem - 1];
+////        }
+////        int min = Integer.MAX_VALUE;
+////        for (int coin : coins) {
+////            int res = coinChange(coins, rem - coin, count);
+////            if (res >= 0 && res < min) {
+////                min = 1 + res;
+////            }
+////        }
+////        count[rem - 1] = (min == Integer.MAX_VALUE) ? -1 : min;
+////        return count[rem - 1];
+////    }
 //
 //
 ////    public int coinChange(int[] coins, int amount) {
