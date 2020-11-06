@@ -44,12 +44,47 @@
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
 //
-////    public static void main(String[] args) {
-//////        System.out.println(new Solution().robN(new int[]{2,7,9,3,1}, 0, 5));
-////        System.out.println(new Solution().rob(new int[]{2,3,2}));
-////        System.out.println(new Solution().rob(new int[]{1,2,3,1}));
-////        System.out.println(new Solution().rob(new int[]{0}));
-////    }
+//    public static void main(String[] args) {
+////        System.out.println(new Solution().robN(new int[]{2,7,9,3,1}, 0, 5));
+//        System.out.println(new Solution().rob(new int[]{2, 3, 2}));
+//        System.out.println(new Solution().rob(new int[]{1, 2, 3, 1}));
+//        System.out.println(new Solution().rob(new int[]{0}));
+//    }
+//
+//    public int rob(int[] nums) {
+//        if (nums == null || nums.length == 0) {
+//            return 0;
+//        }
+//        if (nums.length == 1) {
+//            return nums[0];
+//        }
+//
+//        int first = robN(nums, 0, nums.length - 2);
+//        int last = robN(nums, 1, nums.length - 1);
+//        return Math.max(first, last);
+//    }
+//
+//    /**
+//     *  [start, end]
+//     * @param nums
+//     * @param start
+//     * @param end
+//     * @return
+//     */
+//    private int robN(int[] nums, int start, int end) {
+//        int n = end - start + 1;
+//        int[][] dp = new int[n][2];
+//        dp[0][0] = 0;
+//        dp[0][1] = nums[start];
+//        for (int i = 1; i < n; i++) {
+//            // i0 表示当前没有偷，他的最大值就是
+//            dp[i][0] = Math.max(dp[i-1][1], dp[i-1][0]);
+//            dp[i][1] = dp[i-1][0] + nums[start + i];
+//        }
+//
+//        return Math.max(dp[n-1][0], dp[n-1][1]);
+//    }
+//
 //
 //    /**
 //     * 1 dp[i][*] 代表当前偷到最多钱的总和
@@ -61,34 +96,34 @@
 //     * @param nums
 //     * @return
 //     */
-//    public int rob(int[] nums) {
-//        if (nums == null || nums.length == 0) {
-//            return 0;
-//        }
-//        int n = nums.length;
-//        if (n == 1) {
-//            return nums[0];
-//        }
-//        return Math.max(robN(nums, 0, n - 1), robN(nums, 1, n));
-//    }
-//
-//    public int robN(int[] nums, int start, int end) {
-//        int n = end - start;
-////        int[][] dp = new int[n][2];
-////        dp[0][0] = 0;
-////        dp[0][1] = nums[start];
-//        int i0 = 0;
-//        int i1 = nums[start];
-//        for (int i = 1; i < n; i++) {
-//            int i0Temp = i0;
-////            dp[i][0] = Math.max(dp[i - 1][1], dp[i - 1][0]);
-//            i0 = Math.max(i1, i0Temp);
-////            dp[i][1] = dp[i - 1][0] + nums[start + i];
-//            i1 = i0Temp + nums[start + i];
-//        }
-//        return Math.max(i0, i1);
-////        return Math.max(dp[n - 1][0], dp[n - 1][1]);
-//    }
+////    public int rob(int[] nums) {
+////        if (nums == null || nums.length == 0) {
+////            return 0;
+////        }
+////        int n = nums.length;
+////        if (n == 1) {
+////            return nums[0];
+////        }
+////        return Math.max(robN(nums, 0, n - 1), robN(nums, 1, n));
+////    }
+////
+////    public int robN(int[] nums, int start, int end) {
+////        int n = end - start;
+//////        int[][] dp = new int[n][2];
+//////        dp[0][0] = 0;
+//////        dp[0][1] = nums[start];
+////        int i0 = 0;
+////        int i1 = nums[start];
+////        for (int i = 1; i < n; i++) {
+////            int i0Temp = i0;
+//////            dp[i][0] = Math.max(dp[i - 1][1], dp[i - 1][0]);
+////            i0 = Math.max(i1, i0Temp);
+//////            dp[i][1] = dp[i - 1][0] + nums[start + i];
+////            i1 = i0Temp + nums[start + i];
+////        }
+////        return Math.max(i0, i1);
+//////        return Math.max(dp[n - 1][0], dp[n - 1][1]);
+////    }
 //
 //}
 ////leetcode submit region end(Prohibit modification and deletion)
