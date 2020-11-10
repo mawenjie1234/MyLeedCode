@@ -46,22 +46,55 @@
 //class Solution {
 //
 //    public static void main(String[] args) {
-//        int[] prices = {7,1,5,3,6,4};
-//        System.out.println(new Solution().maxProfit1(prices));
+//        System.out.println(new Solution().maxProfit(new int[]{7, 1, 5, 3, 6, 4}));
+//        System.out.println(new Solution().maxProfit(new int[]{1,2,3,4,5}));
 //    }
 //
-//    public int maxProfit1(int[] prices) {
-//        int i_0 = 0;
-//        int i_1 = Integer.MIN_VALUE; // 关键点
-//        for (int i = 0; i < prices.length; i++) {
-//            int temp = i_0;
-//            i_0 = Math.max(temp, i_1 + prices[i]);
-//            i_1 = Math.max(i_1, temp - prices[i]);
+//    public int maxProfit(int[] prices) {
+//        if (prices == null || prices.length <= 0) {
+//            return 0;
 //        }
-//        return i_0;
-////        dp[i][0] = Math.max(dp[i-1][0] , dp[i-1][1] + prices[i]);
-////        dp[i][1] = Math.max(dp[i-1][1], dp[i-1][0] - prices[i]);
+//        int n = prices.length;
+//        int[][] dp = new int[n][2];
+//        dp[0][0] = 0;
+//        dp[0][1] = -prices[0];
+//        for (int i = 1; i < n; i++) {
+//            dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i]);
+//            dp[i][1] = Math.max(dp[i - 1][1], dp[i - 1][0] - prices[i]);
+//        }
+//        return dp[n - 1][0];
 //    }
+//
+//    //    public int maxProfit(int[] prices) {
+////        if(prices == null || prices.length <= 0) {
+////            return 0;
+////        }
+////        int n = prices.length;
+////        int[][] dp = new int[n][2];
+////        dp[0][0] = 0;
+////        dp[0][1] = -prices[0];
+////        for (int i = 1; i < n; i++) {
+////            dp[i][0] = Math.max(dp[i-1][0], dp[i-1][1] + prices[i]);
+////            dp[i][1] = Math.max(dp[i-1][1], -prices[i]);
+////        }
+////        return dp[n-1][0];
+////    }
+//
+//
+////    public int maxProfit1(int[] prices) {
+////        int i_0 = 0;
+////        int i_1 = Integer.MIN_VALUE; // 关键点
+////        for (int i = 0; i < prices.length; i++) {
+////            int temp = i_0;
+////            i_0 = Math.max(temp, i_1 + prices[i]);
+////            i_1 = Math.max(i_1, temp - prices[i]);
+////        }
+////        return i_0;
+//////        dp[i][0] = Math.max(dp[i-1][0] , dp[i-1][1] + prices[i]);
+//////        dp[i][1] = Math.max(dp[i-1][1], dp[i-1][0] - prices[i]);
+////    }
+//
+//
 ////    dp[i][1][0] = max(dp[i-1][1][0], dp[i-1][1][1] + prices[i])
 ////    dp[i][1][1] = max(dp[i-1][1][1], dp[i-1][0][0] - prices[i])
 ////            = max(dp[i-1][1][1], -prices[i])

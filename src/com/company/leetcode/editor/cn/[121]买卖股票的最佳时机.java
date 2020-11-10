@@ -28,24 +28,52 @@
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
 //    public static void main(String[] args) {
-//        int[] arg = {7, 1, 5, 3, 6, 4};
-//        System.out.println(new Solution().maxProfit(arg));
+//        System.out.println(new Solution().maxProfit(new int[]{7, 1, 5, 3, 6, 4}));
+//        System.out.println(new Solution().maxProfit(new int[]{7, 6, 4, 3, 1}));
 //    }
 //
+//    /**
+//     * dp[i][1/0] 表示i天能买赚到的最大利润，
+//     * 0 表示当前天不持有股票, 前一天也不持有/ 前一天持有，当天卖了
+//     * dp[i][0] = max(dp[i-1][0], dp[i-1][1] + p[i]);
+//     * 1表示当前天持有股票, 前一天持有/ 前一天不持有，当天买了
+//     * dp[i][1] = max(dp[i-1][1], dp[i-1][0] - p[i])
+//     * 又因为本题只允许一次交易，所以需要引入k, dp[i-1][0] - p[i] => -p[i]
+//     * k 表示买入，只要买入，k减少1
+//     *
+//     * @param prices
+//     * @return
+//     */
 //    public int maxProfit(int[] prices) {
-//        int n = prices.length;
-//        if (n < 1) {
+//        if(prices == null || prices.length <= 0) {
 //            return 0;
 //        }
+//        int n = prices.length;
 //        int[][] dp = new int[n][2];
 //        dp[0][0] = 0;
 //        dp[0][1] = -prices[0];
 //        for (int i = 1; i < n; i++) {
-//            dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i]);
-//            dp[i][1] = Math.max(dp[i - 1][1], -prices[i]);
+//            dp[i][0] = Math.max(dp[i-1][0], dp[i-1][1] + prices[i]);
+//            dp[i][1] = Math.max(dp[i-1][1], -prices[i]);
 //        }
-//        return dp[n - 1][0];
+//        return dp[n-1][0];
 //    }
+//
+//
+////    public int maxProfit(int[] prices) {
+////        int n = prices.length;
+////        if (n < 1) {
+////            return 0;
+////        }
+////        int[][] dp = new int[n][2];
+////        dp[0][0] = 0;
+////        dp[0][1] = -prices[0];
+////        for (int i = 1; i < n; i++) {
+////            dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i]);
+////            dp[i][1] = Math.max(dp[i - 1][1], -prices[i]);
+////        }
+////        return dp[n - 1][0];
+////    }
 //
 ////    dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i])
 ////    max(   选择 rest  ,             选择 sell      )
