@@ -33,25 +33,50 @@
 //        System.out.println(new Solution().coinChange(new int[]{2}, 3));
 //    }
 //
-//    // dp[i] 表示第i个最小硬币数量，那么
-//    // for each coins
-//    // dp[i] = min(dp[i - coin] + 1, dp[i])
+//    /**
+//     * dp[i] = dp[i], dp[i-coin] + 1
+//     *
+//     * @param coins
+//     * @param amount
+//     * @return
+//     */
 //    public int coinChange(int[] coins, int amount) {
-//        int n = amount + 1;
-//        int[] dp = new int[n];
-//        dp[0] = 0;
-//        for (int i = 1; i < n; i++) {
-//            int min = n;
+//        if (amount <= 0) {
+//            return -1;
+//        }
+//        int[] dp = new int[amount + 1];
+//        for (int i = 1; i <= amount; i++) {
+//            dp[i] = amount + 1;
 //            for (int j = 0; j < coins.length; j++) {
 //                int before = i - coins[j];
-//                if (before >= 0) {
-//                    min = Math.min(min, dp[i - coins[j]] + 1);
+//                if(before >= 0) {
+//                    dp[i] = Math.min(dp[i], dp[before] + 1);
 //                }
 //            }
-//            dp[i] = min;
 //        }
 //        return dp[amount] > amount ? -1 : dp[amount];
 //    }
+//
+//
+//    // dp[i] 表示第i个最小硬币数量，那么
+//    // for each coins
+//    // dp[i] = min(dp[i - coin] + 1, dp[i])
+////    public int coinChange(int[] coins, int amount) {
+////        int n = amount + 1;
+////        int[] dp = new int[n];
+////        dp[0] = 0;
+////        for (int i = 1; i < n; i++) {
+////            int min = n;
+////            for (int j = 0; j < coins.length; j++) {
+////                int before = i - coins[j];
+////                if (before >= 0) {
+////                    min = Math.min(min, dp[i - coins[j]] + 1);
+////                }
+////            }
+////            dp[i] = min;
+////        }
+////        return dp[amount] > amount ? -1 : dp[amount];
+////    }
 //
 ////    public int coinChange(int[] coins, int amount) {
 ////        int[] dp = new int[amount + 1];
