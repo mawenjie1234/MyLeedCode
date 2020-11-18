@@ -24,10 +24,30 @@
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
-////    public static void main(String[] args) {
-////        int[] temp = {1};
-////        new Solution().plusOne(temp);
+//    public static void main(String[] args) {
+//        int[] temp = {9,8,9};
+//        new Solution().plusOne(temp);
+//    }
+//
+//    public int[] plusOne(int[] digits) {
+//
+//    }
+//
+//
+////    public int[] plusOne(int[] digits) {
+////        for (int i = digits.length - 1; i >= 0; i--) {
+////            digits[i] = digits[i] + 1;
+////            if (digits[i] == 10) {
+////                digits[i] %= 10;
+////            } else {
+////                return digits;
+////            }
+////        }
+////        int[] res = new int[digits.length + 1];
+////        res[0] = 1;
+////        return res;
 ////    }
+//
 //
 ////    public int[] plusOne(int[] digits) {
 ////        for (int i = digits.length -1; i >= 0 ; i--) {

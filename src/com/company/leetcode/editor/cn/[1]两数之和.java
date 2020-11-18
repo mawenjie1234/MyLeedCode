@@ -33,6 +33,34 @@
 //
 //class Solution {
 //
+//    public static void main(String[] args) {
+//        int[] res = new Solution().twoSum(new int[]{2, 7, 11, 15}, 9);
+//        for (int i = 0; i < res.length; i++) {
+//            System.out.print(res[i]);
+//            System.out.print(",");
+//        }
+//    }
+//
+//    public int[] twoSum(int[] nums, int target) {
+//
+//    }
+//
+//
+////    public int[] twoSum(int[] nums, int target) {
+////        HashMap<Integer, Integer> res = new HashMap<>();
+////
+////        for (int i = 0; i < nums.length; i++) {
+////            int key = target - nums[i];
+////            if(res.containsKey(key)) {
+////                return new int[] {res.get(key), i};
+////            }else {
+////                res.put(nums[i], i);
+////            }
+////        }
+////
+////        return new int[]{};
+////    }
+//
 //
 //
 ////    public int[] twoSum(int[] nums, int target) {
@@ -46,7 +74,7 @@
 ////        }
 ////        return new int[]{};
 ////    }
-////
+//
 //
 //
 ////    public int[] twoSum(int[] nums, int target) {
