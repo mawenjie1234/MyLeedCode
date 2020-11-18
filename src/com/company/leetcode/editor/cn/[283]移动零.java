@@ -1,3 +1,4 @@
+//package com.company.leetcode.editor.cn;
 ////给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。
 ////
 //// 示例:
@@ -16,10 +17,49 @@
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
+//
+//    public static void main(String[] args) {
+//        int[] nums = {0,1,0,3,12};
+//        new Solution().moveZeroes(nums);
+//        for (int i = 0; i < nums.length; i++) {
+//            System.out.print(nums[i]);
+//            System.out.print(",");
+//        }
+//    }
 //    public void moveZeroes(int[] nums) {
 //
 //    }
 //
+////
+////    public void moveZeroes(int[] nums) {
+////        int lastZeroIndex = 0;
+////        for (int i = 0; i < nums.length; i++) {
+////            if(nums[i] != 0) {
+////                nums[lastZeroIndex] = nums[i];
+////                if(lastZeroIndex != i) {
+////                    nums[i] = 0;
+////                }
+////                lastZeroIndex++;
+////            }
+////        }
+////    }
+//
+//
+////    public void moveZeroes(int[] nums) {
+////        int lastZeroIndex = -1;
+////        for (int i = 0; i < nums.length; i++) {
+////            if(nums[i] != 0 && lastZeroIndex > -1) {
+////                int temp = nums[i];
+////                nums[i] = 0;
+////                nums[lastZeroIndex] = temp;
+////                lastZeroIndex++;
+////            }else {
+////                if(lastZeroIndex == -1) {
+////                    lastZeroIndex = i;
+////                }
+////            }
+////        }
+////    }
 //
 //    // 第二遍。
 ////    public void moveZeroes(int[] nums) {

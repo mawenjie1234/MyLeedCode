@@ -1,4 +1,4 @@
-////给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有满足条件且不重复
+//package com.company.leetcode.editor.cn;//给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有满足条件且不重复
 ////的三元组。
 ////
 //// 注意：答案中不可以包含重复的三元组。
@@ -35,9 +35,119 @@
 ////]
 //
 //class Solution {
-//    public List<List<Integer>> threeSum(int[] nums) {
+//
+//    public static void main(String[] args) {
+//        List<List<Integer>> res = new Solution().threeSum(new int[]{-1, 0, 1, 2, -1, -4});
+////        List<List<Integer>> res = new Solution().threeSum(new int[]{-5, -4, -4, -7, -10, -2});
 //
 //    }
+//
+//    public List<List<Integer>> threeSum(int[] nums) {
+//        if (nums == null || nums.length == 0) {
+//            return null;
+//        }
+//        List<List<Integer>> res = new ArrayList<>();
+//        if (nums.length < 3) {
+//            return res;
+//        }
+//        Arrays.sort(nums);
+//        for (int i = 0; i < nums.length; i++) {
+//            int n = nums[i];
+//            if (n > 0) break;
+//            if (i > 0 && nums[i] == nums[i - 1]) continue;
+//            int L = i + 1;
+//            int R = nums.length - 1;
+//            while (L < R) {
+//                int sum = n + nums[L] + nums[R];
+//                if (sum == 0) {
+//                    res.add(Arrays.asList(n, nums[L], nums[R]));
+//                    while (L < R && nums[L] == nums[L + 1]) L++;
+//                    while (L < R && nums[R] == nums[R - 1]) R--;
+//                    L++;
+//                    R--;
+//                } else if (sum > 0) {
+//                    R--;
+//                } else {
+//                    L++;
+//                }
+//            }
+//        }
+//        return res;
+//    }
+//
+//
+////    public List<List<Integer>> threeSum(int[] nums) {
+////        if (nums == null || nums.length == 0) {
+////            return null;
+////        }
+////        List<List<Integer>> res = new ArrayList<>();
+////        if (nums.length < 3) {
+////            return res;
+////        }
+////        Arrays.sort(nums);
+////        for (int i = 0; i < nums.length; i++) {
+////            int n = nums[i];
+////            if (n > 0) {
+////                break;
+////            }
+////            if (i > 0 && nums[i] == nums[i - 1]) {
+////                continue;
+////            }
+////            int L = i + 1;
+////            int R = nums.length - 1;
+////            while (L < R) {
+////                int sum = nums[i] + nums[L] + nums[R];
+////                if (sum == 0) {
+////                    res.add(Arrays.asList(nums[i], nums[L], nums[R]));
+////                    while (L < R && nums[L] == nums[L + 1]) L++;
+////                    while (L < R && nums[R] == nums[R - 1]) R--;
+////                    L++;
+////                    R--;
+////                } else if (sum > 0) {
+////                    R--;
+////                } else {
+////                    L++;
+////                }
+////            }
+////
+////        }
+////
+////        return res;
+////    }
+//
+//
+////    public List<List<Integer>> threeSum(int[] nums) {
+////        if (nums == null || nums.length < 3) {
+////            return null;
+////        }
+////        Arrays.sort(nums);
+////        List<List<Integer>> res = new ArrayList<>();
+////        for (int i = 0; i < nums.length; i++) {
+////            int numsI = nums[i];
+////            if (numsI > 0)
+////                break;
+////            if (i > 0 && nums[i] == nums[i - 1]) continue;
+////            int L = i + 1;
+////            int R = nums.length - 1;
+////            while (L < R) {
+////                int sum = nums[i] + nums[L] + nums[R];
+////                if (sum == 0) {
+////                    res.add(Arrays.asList(nums[i], nums[L], nums[R]));
+////                    // 找到了，继续下去怕重复，所以过滤
+////                    while (L < R && nums[L] == nums[L + 1]) L++;
+////                    while (L < R && nums[R] == nums[R - 1]) R--;
+////                    L++;
+////                    R--;
+////                } else if (sum > 0) {
+////                    R--;
+////                } else {
+////                    L++;
+////                }
+////            }
+////        }
+////
+////        return res;
+////    }
 //
 ////    public List<List<Integer>> threeSum(int[] nums) {
 ////        List<List<Integer>> res = new ArrayList<>();

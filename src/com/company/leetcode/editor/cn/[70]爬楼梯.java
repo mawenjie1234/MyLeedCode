@@ -37,22 +37,40 @@
 //class Solution {
 //    public static void main(String[] args) {
 //        System.out.println(new Solution().climbStairs(4));
+//        System.out.println(new Solution().climbStairs(10));
 //    }
 //
 //    public int climbStairs(int n) {
-//        if(n < 3) {
+//        if (n < 3) {
 //            return n;
 //        }
-//        int stairs = 0;
+//        int res = 0;
 //        int first = 1;
-//        int sed = 2;
+//        int second = 2;
+//
 //        for (int i = 3; i <= n; i++) {
-//            stairs = first + sed;
-//            first = sed;
-//            sed = stairs;
+//            res = first + second;
+//            first = second;
+//            second = res;
 //        }
-//        return stairs;
+//        return res;
 //    }
+//
+//
+////    public int climbStairs(int n) {
+////        if(n < 3) {
+////            return n;
+////        }
+////        int stairs = 0;
+////        int first = 1;
+////        int sed = 2;
+////        for (int i = 3; i <= n; i++) {
+////            stairs = first + sed;
+////            first = sed;
+////            sed = stairs;
+////        }
+////        return stairs;
+////    }
 //
 //
 ////    public int climbStairs(int n) {

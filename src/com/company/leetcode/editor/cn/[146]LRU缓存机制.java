@@ -30,48 +30,66 @@
 //// 👍 763 👎 0
 //
 //
-//import java.util.HashMap;
 //import java.util.LinkedHashMap;
-//import java.util.LinkedList;
 //import java.util.Map;
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class LRUCache extends LinkedHashMap<Integer, Integer> {
 //
-////    public static void main(String[] args) {
-////        LRUCache cache = new LRUCache(2);
-////        cache.put(1,1);
-////        cache.put(2,2);
-////        System.out.println(cache.get(1));
-////        cache.put(3,3);
-////        System.out.println(cache.get(2));
-////        cache.put(4,4);
-////        System.out.println(cache.get(1));
-////        System.out.println(cache.get(3));
-////        System.out.println(cache.get(4));
-////
-////
-////    }
-//
-//    private int mCapacity;
-//
-//    public LRUCache(int capacity) {
-//        super(capacity, 0.75f, true);
-//        this.mCapacity = capacity;
+//    public static void main(String[] args) {
+//        LRUCache cache = new LRUCache(2);
+//        cache.put(1,1);
+//        cache.put(2,2);
+//        System.out.println(cache.get(1));
+//        cache.put(3,3);
+//        System.out.println(cache.get(2));
+//        cache.put(4,4);
+//        System.out.println(cache.get(1));
+//        System.out.println(cache.get(3));
+//        System.out.println(cache.get(4));
 //    }
 //
-//    public int get(int key) {
-//        return super.getOrDefault(key, -1);
+//    private final int mCapacity;
+//
+//    public LRUCache(int size) {
+//        super(size, 0.75f, true);
+//        mCapacity = size;
 //    }
 //
-//    public void put(int key, int value) {
-//        super.put(key, value);
+//    @Override
+//    public Integer get(Object key) {
+//        return super.get(key);
+//    }
+//
+//    @Override
+//    public Integer put(Integer key, Integer value) {
+//        return super.put(key, value);
 //    }
 //
 //    @Override
 //    protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest) {
 //        return size() > mCapacity;
 //    }
+//
+//    //    private int mCapacity;
+////
+////    public LRUCache(int capacity) {
+////        super(capacity, 0.75f, true);
+////        this.mCapacity = capacity;
+////    }
+////
+////    public int get(int key) {
+////        return super.getOrDefault(key, -1);
+////    }
+////
+////    public void put(int key, int value) {
+////        super.put(key, value);
+////    }
+////
+////    @Override
+////    protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest) {
+////        return size() > mCapacity;
+////    }
 //
 //    //    class Node{
 ////        int key;

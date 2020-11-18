@@ -1,4 +1,5 @@
-//package com.company.leetcode.editor.cn;//反转一个单链表。
+//package com.company.leetcode.editor.cn;
+////反转一个单链表。
 ////
 //// 示例:
 ////
@@ -30,27 +31,60 @@
 ////你可以迭代或递归地反转链表。你能否用两种方法解决这道题？
 //class Solution {
 //
-////    public class ListNode {
-////        int val;
-////        ListNode next;
-////
-////        ListNode(int x) {
-////            val = x;
+//    public class ListNode {
+//        int val;
+//        ListNode next;
+//
+//        ListNode(int x) {
+//            val = x;
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//
+//    }
+//    public ListNode reverseList(ListNode head) {
+//
+//    }
+//
+//
+////    public ListNode reverseList(ListNode head) {
+////        ListNode pre = null;
+////        ListNode current = head;
+////        while (current != null) {
+////            ListNode temp = current.next;
+////            current.next = pre;
+////            pre = current;
+////            current = temp;
 ////        }
+////        return pre;
 ////    }
 //
-//    // 3
-//    public ListNode reverseList(ListNode head) {
-//        ListNode pre = null;
-//        ListNode current = head;
-//        while (current != null) {
-//            ListNode temp = current.next;
-//            current.next = pre;
-//            pre = current;
-//            current = temp;
-//        }
-//        return pre;
-//    }
+//
+////    public ListNode reverseList(ListNode head) {
+////         ListNode pre = head;
+////         ListNode current  = head;
+////         while (current != null) {
+////             ListNode temp = current.next;
+////             current.next = pre;
+////             pre = current;
+////             current = temp;
+////         }
+////         return pre;
+////    }
+//
+//        // 3
+////    public ListNode reverseList(ListNode head) {
+////        ListNode pre = null;
+////        ListNode current = head;
+////        while (current != null) {
+////            ListNode temp = current.next;
+////            current.next = pre;
+////            pre = current;
+////            current = temp;
+////        }
+////        return pre;
+////    }
 //
 //
 ////    public ListNode reverseList(ListNode head) {
