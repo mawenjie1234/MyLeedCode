@@ -1,4 +1,5 @@
-//package com.company.leetcode.editor.cn;//将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+//package com.company.leetcode.editor.cn;
+////将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
 ////
 ////
 ////
@@ -78,23 +79,44 @@
 //    }
 //
 //    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+//        ListNode head1 = l1;
+//        ListNode head2 = l2;
 //
-//        ListNode first = new ListNode(-1);
-//
-//        ListNode current = first;
-//
-//        while (l1 != null && l2 != null) {
-//            if(l1.val < l2.val) {
-//                current.next = l1;
-//                l1 = l1.next;
+//        ListNode head = new ListNode();
+//        ListNode res = head;
+//        while (head1 != null && head2 != null) {
+//            if(head1.val < head2.val) {
+//                head.next = head1;
+//                head1 = head1.next;
 //            }else {
-//                current.next = l2;
-//                l2 = l2.next;
+//                head.next = head2;
+//                head2 = head2.next;
 //            }
-//            current = current.next;
+//            head = head.next;
 //        }
-//        current.next = l1 == null ? l2 : l1;
-//        return first.next;
+//        head.next = head1 == null ? head2 : head1;
+//        return res.next;
 //    }
+//
+//
+////    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+////
+////        ListNode first = new ListNode(-1);
+////
+////        ListNode current = first;
+////
+////        while (l1 != null && l2 != null) {
+////            if(l1.val < l2.val) {
+////                current.next = l1;
+////                l1 = l1.next;
+////            }else {
+////                current.next = l2;
+////                l2 = l2.next;
+////            }
+////            current = current.next;
+////        }
+////        current.next = l1 == null ? l2 : l1;
+////        return first.next;
+////    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)
