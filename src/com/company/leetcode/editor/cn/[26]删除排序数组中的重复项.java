@@ -47,8 +47,34 @@
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
-//    public int removeDuplicates(int[] nums) {
+//    public static void main(String[] args) {
+//        int[] nums = {0,0,1,1,1,2,2,3,3,4};
+//        new Solution().removeDuplicates(nums);
+//        for (int i = 0; i < nums.length; i++) {
+//            System.out.print(nums[i]);
+//            System.out.print(",");
+//        }
+//    }
 //
+//    public int removeDuplicates(int[] nums) {
+//        int length = 0;
+//        boolean needOverWrite = false;
+//        for (int i = 1; i < nums.length; i++) {
+//            if(nums[i] == nums[length]) {
+//                if(!needOverWrite) {
+//                    needOverWrite = true;
+//                    length++;
+//                }
+//            }else {
+//                if(needOverWrite) {
+//                    nums[length] = nums[i];
+////                    nums[i] = -1;
+//                    needOverWrite = false;
+//                }
+//                length++;
+//            }
+//        }
+//        return length;
 //    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)

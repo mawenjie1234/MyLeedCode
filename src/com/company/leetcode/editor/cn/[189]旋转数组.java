@@ -32,13 +32,47 @@
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
 //
-////    public static void main(String[] args) {
-////        int[] temp = new int[]{1,2,3,4,5,6,7};
-////        new Solution().rotate(temp, 3);
-////        for (int i = 0; i <temp.length ; i++) {
-////            System.out.println(temp[i]);
+//    public static void main(String[] args) {
+//        int[] temp = new int[]{1, 2, 3, 4, 5, 6, 7};
+//        new Solution().rotate(temp, 3);
+//        for (int i = 0; i < temp.length; i++) {
+//            System.out.println(temp[i]);
+//        }
+//    }
+//
+//    public void rotate(int[] nums, int k) {
+//        if (k <= 0) {
+//            return;
+//        }
+//        reverse(nums, 0, nums.length - 1);
+//        reverse(nums, 0, k - 1);
+//        reverse(nums, k, nums.length - 1);
+//    }
+//
+//    private void reverse(int[] nums, int start, int ent) {
+//        while (start < ent) {
+//            int temp = nums[start];
+//            nums[start] = nums[ent];
+//            nums[ent] = temp;
+//            start++;
+//            ent--;
+//        }
+//    }
+//
+//
+////    public void rotate(int[] nums, int k) {
+////
+////        for (int i = 0; i < k; i++) {
+////            int last = nums[0];
+////            for (int j = 1; j < nums.length; j++) {
+////                int temp = nums[j];
+////                nums[j] = last;
+////                last = temp;
+////            }
+////            nums[0] = last;
 ////        }
 ////    }
+//
 //
 ////    public void rotate(int[] nums, int k) {
 ////        k %= nums.length;
