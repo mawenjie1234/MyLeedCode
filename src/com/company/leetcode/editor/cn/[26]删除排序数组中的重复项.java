@@ -47,34 +47,39 @@
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
-//    public static void main(String[] args) {
-//        int[] nums = {0,0,1,1,1,2,2,3,3,4};
-//        new Solution().removeDuplicates(nums);
-//        for (int i = 0; i < nums.length; i++) {
-//            System.out.print(nums[i]);
-//            System.out.print(",");
-//        }
-//    }
+////    public static void main(String[] args) {
+////        int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+////        int res = new Solution().removeDuplicates(nums);
+////        for (int i = 0; i < nums.length; i++) {
+////            System.out.print(nums[i]);
+////            System.out.print(",");
+////        }
+////        System.out.println();
+////        System.out.println(res);
+////    }
+//
 //
 //    public int removeDuplicates(int[] nums) {
-//        int length = 0;
-//        boolean needOverWrite = false;
-//        for (int i = 1; i < nums.length; i++) {
-//            if(nums[i] == nums[length]) {
-//                if(!needOverWrite) {
-//                    needOverWrite = true;
-//                    length++;
-//                }
-//            }else {
-//                if(needOverWrite) {
-//                    nums[length] = nums[i];
-////                    nums[i] = -1;
-//                    needOverWrite = false;
-//                }
-//                length++;
+//        int i = 0;
+//        for (int j = 0; j < nums.length; j++) {
+//            if (nums[i] != nums[j]) {
+//                i++;
+//                nums[i] = nums[j];
 //            }
 //        }
-//        return length;
+//        return i + 1;
 //    }
+//
+//
+////    public int removeDuplicates(int[] nums) {
+////        int length = 0;
+////        for (int i = 1; i < nums.length; i++) {
+////            if(nums[i] != nums[length]) {
+////                length++;
+////                nums[length] = nums[i];
+////            }
+////        }
+////        return length + 1;
+////    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)

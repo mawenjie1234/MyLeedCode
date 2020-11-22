@@ -12,12 +12,15 @@
 //
 //
 ////leetcode submit region begin(Prohibit modification and deletion)
+//
+//import java.util.List;
+//
 ///**
 // * Definition for singly-linked list.
 // * public class ListNode {
-// *     int val;
-// *     ListNode next;
-// *     ListNode(int x) { val = x; }
+// * int val;
+// * ListNode next;
+// * ListNode(int x) { val = x; }
 // * }
 // */
 //
@@ -43,17 +46,33 @@
 //    public static void main(String[] args) {
 //
 //    }
+//
 //    public ListNode reverseList(ListNode head) {
+//        if (head == null || head.next == null) {
+//            return head;
+//        }
 //        ListNode pre = null;
-//        ListNode current = head;
-//        while (current != null) {
-//            ListNode next = current.next;
-//            current.next = pre;
-//            pre = current;
-//            current = next;
+//        while (head != null) {
+//            ListNode temp = head.next;
+//            head.next = pre;
+//            pre = head;
+//            head = temp;
 //        }
 //        return pre;
 //    }
+//
+//
+////    public ListNode reverseList(ListNode head) {
+////        ListNode pre = null;
+////        ListNode current = head;
+////        while (current != null) {
+////            ListNode next = current.next;
+////            current.next = pre;
+////            pre = current;
+////            current = next;
+////        }
+////        return pre;
+////    }
 //
 //
 ////    public ListNode reverseList(ListNode head) {
@@ -81,7 +100,7 @@
 ////         return pre;
 ////    }
 //
-//        // 3
+//    // 3
 ////    public ListNode reverseList(ListNode head) {
 ////        ListNode pre = null;
 ////        ListNode current = head;

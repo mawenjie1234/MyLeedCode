@@ -29,7 +29,7 @@ public class Main {
         return memory * (1 + ratio);
     }
 
-    public static int maxArea(int[] height) {
+    public static synchronized int maxArea(int[] height) {
         if (height.length < 1) {
             return 0;
         }

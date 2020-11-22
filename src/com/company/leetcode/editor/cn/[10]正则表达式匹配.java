@@ -68,6 +68,42 @@
 //        System.out.println(new Solution().isMatch("aa", "*a"));
 //    }
 //
+//    public boolean isMatch(String s, String p) {
+//        int m = s.length();
+//        int n = p.length();
+//        boolean[][] dp = new boolean[m + 1][n + 1];
+//        dp[0][0] = true;
+//        for (int i = 0; i <= m; i++) {
+//            for (int j = 1; j <= n; j++) {
+//                if (p.charAt(j - 1) == '*') {
+//                    if(j > 1) {
+//                        dp[i][j] = dp[i][j-2];
+//                    }else {
+//                        dp[i][j] = false;
+//                        continue;
+//                    }
+//                    if(match(s, p, i, j - 1)) {
+//                        dp[i][j] =  dp[i][j] || dp[i-1][j];
+//                    }
+//                } else {
+//                    dp[i][j] = match(s, p, i, j) && dp[i - 1][j - 1];
+//                }
+//            }
+//        }
+//
+//        return dp[m][n];
+//    }
+//
+//    private boolean match(String s, String p, int i, int j) {
+//        if (i == 0 || j == 0) { //
+//            return false;
+//        }
+//        if (p.charAt(j - 1) == '.') {
+//            return true;
+//        }
+//        return s.charAt(i - 1) == p.charAt(j - 1);
+//    }
+//
 //
 //    /**
 //     *
@@ -86,42 +122,43 @@
 //     *然后判断 是否相同，来判断*之前的是否有相同，
 //     *
 //     */
-//    public boolean isMatch(String s, String p) {
-//        int m = s.length();
-//        int n = p.length();
-//        boolean[][] res = new boolean[m + 1][n + 1];
-//        res[0][0] = true;
-//        for (int i = 0; i <= m; i++) {
-//            for (int j = 1; j <= n; j++) {
-//                if (p.charAt(j - 1) == '*') {
-//                    if (j > 1) {
-//                        res[i][j] = res[i][j - 2];
-//                    } else {
-//                        res[i][j] = false;
-//                    }
-//                    if (match(s, p, i, j - 1)) {
-//                        res[i][j] = res[i][j] || res[i - 1][j];
-//                    }
-//
-//                } else {
-//                    res[i][j] = match(s, p, i, j) && res[i - 1][j - 1];
-//                }
-//            }
-//        }
-//
-//
-//        return res[m][n];
-//    }
-//
-//    private boolean match(String s, String p, int sIndex, int pIndex) {
-//        if (sIndex == 0 || pIndex == 0) {
-//            return false;
-//        }
-//        if (p.charAt(pIndex - 1) == '.') {
-//            return true;
-//        }
-//        return s.charAt(sIndex - 1) == p.charAt(pIndex - 1);
-//    }
+////    public boolean isMatch(String s, String p) {
+////        int m = s.length();
+////        int n = p.length();
+////        boolean[][] res = new boolean[m + 1][n + 1];
+////        res[0][0] = true;
+////        for (int i = 0; i <= m; i++) {
+////            for (int j = 1; j <= n; j++) {
+////                if (p.charAt(j - 1) == '*') {
+////                    if (j > 1) {
+////                        res[i][j] = res[i][j - 2];
+////                    } else {
+////                        res[i][j] = false;
+////                        continue;
+////                    }
+////                    if (match(s, p, i, j - 1)) {
+////                        res[i][j] = res[i][j] || res[i - 1][j];
+////                    }
+////
+////                } else {
+////                    res[i][j] = match(s, p, i, j) && res[i - 1][j - 1];
+////                }
+////            }
+////        }
+////
+////
+////        return res[m][n];
+////    }
+////
+////    private boolean match(String s, String p, int sIndex, int pIndex) {
+////        if (sIndex == 0 || pIndex == 0) {
+////            return false;
+////        }
+////        if (p.charAt(pIndex - 1) == '.') {
+////            return true;
+////        }
+////        return s.charAt(sIndex - 1) == p.charAt(pIndex - 1);
+////    }
 //
 //
 ////    public boolean isMatch(String s, String p) {

@@ -56,29 +56,58 @@
 //    }
 //
 //    public ListNode swapPairs(ListNode head) {
-//        if(head == null || head.next == null) {
-//            return head;
-//        }
-//        ListNode res = head.next;
 //
-//        ListNode current = head;
-//        ListNode pre = null;
-//
-//        while (current != null && current.next != null) {
-//            // current 3
-//            ListNode next = current.next; // 4
-//            ListNode third = next.next; // 5
-//            current.next = third; // 3.next = 5
-//            next.next = current; // 4.next = 3
-//            current = third;
-//            if(pre != null) {
-//                pre.next = next;
-//            }
-//            pre = next.next;
-//        }
-//
-//        return res;
 //    }
+//
+//
+////    public ListNode swapPairs(ListNode head) {
+////        if(head == null || head.next == null) {
+////            return head;
+////        }
+////        ListNode res = head.next;
+////        ListNode current = head;
+////        ListNode pre = null;
+////
+////        while (current != null || current.next != null) { // 3
+////            ListNode next = current.next; // 4
+////            ListNode third = next.next; // 5
+////            current.next = third;
+////            next.next = current;
+////            current = third;
+////            if(pre != null) {
+////                pre.next = next;
+////            }
+////            pre = next.next;
+////        }
+////
+////        return res;
+////    }
+//
+//
+////    public ListNode swapPairs(ListNode head) {
+////        if(head == null || head.next == null) {
+////            return head;
+////        }
+////        ListNode res = head.next;
+////
+////        ListNode current = head;
+////        ListNode pre = null;
+////
+////        while (current != null && current.next != null) {
+////            // current 3
+////            ListNode next = current.next; // 4
+////            ListNode third = next.next; // 5
+////            current.next = third; // 3.next = 5
+////            next.next = current; // 4.next = 3
+////            current = third;
+////            if(pre != null) {
+////                pre.next = next;
+////            }
+////            pre = next.next;
+////        }
+////
+////        return res;
+////    }
 //
 //
 ////    public ListNode swapPairs(ListNode head) {
