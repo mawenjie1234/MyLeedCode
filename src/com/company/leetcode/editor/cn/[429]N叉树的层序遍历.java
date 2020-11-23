@@ -55,55 +55,76 @@
 //
 //class Solution {
 //
-////    static class Node {
-////        public int val;
-////        public List<Node> children;
-////
-////        public Node() {
+//    static class Node {
+//        public int val;
+//        public List<Node> children;
+//
+//        public Node() {
+//        }
+//
+//        public Node(int _val) {
+//            val = _val;
+//            children = new ArrayList<>();
+//        }
+//
+//        public Node(int _val, List<Node> _children) {
+//            val = _val;
+//            children = _children;
+//        }
+//
+//        public Node add(Node node) {
+//            children.add(node);
+//            return this;
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        Node root = new Node(1);
+//
+//        Node row21 = new Node(2);
+//        Node row22 = new Node(3);
+//        Node row23 = new Node(4);
+//
+//        root.add(row21).add(row22).add(row23);
+//
+//        Node row31 = new Node(5);
+//        Node row32 = new Node(6);
+//        Node row33 = new Node(7);
+//        row21.add(row31).add(row32);
+//
+//        row22.add(row33);
+//
+//        List<List<Integer>> res = new Solution().levelOrder(root);
+//        for (List<Integer> list : res) {
+//            for (Integer value : list) {
+//                System.out.print(value + ", ");
+//            }
+//            System.out.println();
+//        }
+//    }
+//
+////    public List<List<Integer>> levelOrder(Node root) {
+////        List<List<Integer>> res = new ArrayList<>();
+////        if(root == null) {
+////            return res;
 ////        }
-////
-////        public Node(int _val) {
-////            val = _val;
-////            children = new ArrayList<>();
-////        }
-////
-////        public Node(int _val, List<Node> _children) {
-////            val = _val;
-////            children = _children;
-////        }
-////
-////        public Node add(Node node) {
-////            children.add(node);
-////            return this;
-////        }
-////    }
-////
-////    ;
-////
-////    public static void main(String[] args) {
-////        Node root = new Node(1);
-////
-////        Node row21 = new Node(2);
-////        Node row22 = new Node(3);
-////        Node row23 = new Node(4);
-////
-////        root.add(row21).add(row22).add(row23);
-////
-////        Node row31 = new Node(5);
-////        Node row32 = new Node(6);
-////        Node row33 = new Node(7);
-////        row21.add(row31).add(row32);
-////
-////        row22.add(row33);
-////
-////        List<List<Integer>> res = new Solution().levelOrder(root);
-////        for (List<Integer> list : res) {
-////            for (Integer value : list) {
-////                System.out.print(value + ", ");
+////        LinkedList<Node> level = new LinkedList<>();
+////        level.addFirst(root);
+////        while (!level.isEmpty()) {
+////            int size = level.size();
+////            List<Integer> levelRes = new ArrayList<>();
+////            for (int i = 0; i < size; i++) {
+////                Node temp = level.pollFirst();
+////                if(temp != null) {
+////                    levelRes.add(temp.val);
+////                    level.addAll(temp.children);
+////                }
 ////            }
-////            System.out.println();
+////            res.add(levelRes);
 ////        }
+////        return res;
 ////    }
+//
 //
 ////    public List<List<Integer>> levelOrder(Node root) {
 ////        List<List<Integer>> res = new ArrayList<>();

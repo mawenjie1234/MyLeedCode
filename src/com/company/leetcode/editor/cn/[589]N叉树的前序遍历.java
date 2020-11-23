@@ -44,36 +44,57 @@
 //
 //class Solution {
 //
-////    class Node {
-////        public int val;
-////        public List<Node> children;
-////
-////        public Node() {}
-////
-////        public Node(int _val) {
-////            val = _val;
-////        }
-////
-////        public Node(int _val, List<Node> _children) {
-////            val = _val;
-////            children = _children;
-////        }
-////    };
+//    class Node {
+//        public int val;
+//        public List<Node> children;
+//
+//        public Node() {
+//        }
+//
+//        public Node(int _val) {
+//            val = _val;
+//        }
+//
+//        public Node(int _val, List<Node> _children) {
+//            val = _val;
+//            children = _children;
+//        }
+//    }
+//
+//    ;
 //
 //    public List<Integer> preorder(Node root) {
-//        List<Integer> res = new ArrayList<>();
-//        if(root == null) {
+//        LinkedList<Integer> res = new LinkedList<>();
+//        if (root == null) {
 //            return res;
 //        }
 //        LinkedList<Node> stack = new LinkedList<>();
 //        stack.add(root);
 //        while (!stack.isEmpty()) {
-//            Node node = stack.pollLast();
-//            res.add(node.val);
-//            Collections.reverse(node.children);
-//            stack.addAll(node.children);
+//            Node temp = stack.getFirst();
+//            res.add(temp.val);
+//            for (int i = temp.children.size() - 1; i >=0; i--) {
+//                stack.addFirst(temp.children.get(i));
+//            }
 //        }
 //        return res;
 //    }
+//
+//
+////    public List<Integer> preorder(Node root) {
+////        List<Integer> res = new ArrayList<>();
+////        if(root == null) {
+////            return res;
+////        }
+////        LinkedList<Node> stack = new LinkedList<>();
+////        stack.add(root);
+////        while (!stack.isEmpty()) {
+////            Node node = stack.pollLast();
+////            res.add(node.val);
+////            Collections.reverse(node.children);
+////            stack.addAll(node.children);
+////        }
+////        return res;
+////    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)

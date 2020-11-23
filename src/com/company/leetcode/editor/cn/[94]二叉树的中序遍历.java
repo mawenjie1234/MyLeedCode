@@ -20,6 +20,7 @@
 ////leetcode submit region begin(Prohibit modification and deletion)
 //
 //import java.util.ArrayList;
+//import java.util.LinkedList;
 //import java.util.List;
 //
 ///**
@@ -33,15 +34,37 @@
 // */
 //class Solution {
 //
-////    public class TreeNode {
-////        int val;
-////        TreeNode left;
-////        TreeNode right;
-////
-////        TreeNode(int x) {
-////            val = x;
-////        }
-////    }
+//    public class TreeNode {
+//        int val;
+//        TreeNode left;
+//        TreeNode right;
+//
+//        TreeNode(int x) {
+//            val = x;
+//        }
+//    }
+//
+//    public List<Integer> inorderTraversal(TreeNode root) {
+//        List<Integer> res = new ArrayList<>();
+//        if(root == null) {
+//            return res;
+//        }
+//        helper(root, res);
+//        return res;
+//    }
+//
+//    private void helper(TreeNode node, List<Integer> res) {
+//        if(node == null) {
+//            return;
+//        }
+//        if(node.left != null) {
+//            helper(node.left, res);
+//        }
+//        res.add(node.val);
+//        if(node.right != null) {
+//            helper(node.right, res);
+//        }
+//    }
 //
 ////    public List<Integer> inorderTraversal(TreeNode root) {
 ////        List<Integer> inorderRes = new ArrayList<>();
