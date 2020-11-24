@@ -23,6 +23,7 @@
 //import java.util.ArrayList;
 //import java.util.LinkedList;
 //import java.util.List;
+//import java.util.Queue;
 //
 ///**
 // * Definition for a binary tree node.
@@ -34,39 +35,65 @@
 // * }
 // */
 //class Solution {
-////    public class TreeNode {
-////        int val;
-////        TreeNode left;
-////        TreeNode right;
-////
-////        TreeNode(int x) {
-////            val = x;
-////        }
-////    }
+//    public class TreeNode {
+//        int val;
+//        TreeNode left;
+//        TreeNode right;
+//
+//        TreeNode(int x) {
+//            val = x;
+//        }
+//    }
 //
 //    public List<Integer> largestValues(TreeNode root) {
 //        List<Integer> res = new ArrayList<>();
 //        if(root == null) {
 //            return res;
 //        }
-//        LinkedList<TreeNode> current = new LinkedList<>();
-//        current.add(root);
-//        while (current.size() > 0) {
-//            int size = current.size();
-//            int maxValue = current.getFirst().val;
+//        Queue<TreeNode> queue = new LinkedList<>();
+//        queue.add(root);
+//        while (!queue.isEmpty()) {
+//            int size = queue.size();
+//            int max = Integer.MIN_VALUE;
 //            for (int i = 0; i < size; i++) {
-//                TreeNode temp = current.pollFirst();
-//                maxValue = Math.max(maxValue, temp.val);
-//                if(temp.left != null) {
-//                    current.add(temp.left);
-//                }
-//                if(temp.right != null) {
-//                    current.add(temp.right);
+//                TreeNode node = queue.poll();
+//                if(node != null) {
+//                    max = Math.max(max, node.val);
+//                    if(node.left != null)
+//                        queue.add(node.left);
+//                    if(node.right != null)
+//                        queue.add(node.right);
 //                }
 //            }
-//            res.add(maxValue);
+//            res.add(max);
 //        }
 //        return res;
 //    }
+//
+//
+////    public List<Integer> largestValues(TreeNode root) {
+////        List<Integer> res = new ArrayList<>();
+////        if(root == null) {
+////            return res;
+////        }
+////        LinkedList<TreeNode> current = new LinkedList<>();
+////        current.add(root);
+////        while (current.size() > 0) {
+////            int size = current.size();
+////            int maxValue = current.getFirst().val;
+////            for (int i = 0; i < size; i++) {
+////                TreeNode temp = current.pollFirst();
+////                maxValue = Math.max(maxValue, temp.val);
+////                if(temp.left != null) {
+////                    current.add(temp.left);
+////                }
+////                if(temp.right != null) {
+////                    current.add(temp.right);
+////                }
+////            }
+////            res.add(maxValue);
+////        }
+////        return res;
+////    }
 //}
 ////leetcode submit region end(Prohibit modification and deletion)

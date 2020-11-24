@@ -24,30 +24,35 @@
 ////leetcode submit region begin(Prohibit modification and deletion)
 //class Solution {
 //
-////    public static void main(String[] args) {
-////        List<String> res = new Solution().generateParenthesis(3);
-////        for (String s: res) {
-////            System.out.println(s);
-////        }
-////    }
+//    public static void main(String[] args) {
+//        List<String> res = new Solution().generateParenthesis(3);
+//        for (String s: res) {
+//            System.out.println(s);
+//        }
+//    }
 //
 //    public List<String> generateParenthesis(int n) {
+//        List<String> res = new ArrayList<>();
+//        helper(res, n, "", 0,0);
 //
+//        return res;
 //    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//
+//    private void helper(List<String> res, int n, String currentS, int leftNum, int rightNum) {
+//        if(currentS.length() == 2 * n) {
+//            if(leftNum == n) {
+//                res.add(currentS);
+//            }
+//            return;
+//        }
+//        if(leftNum < n) {
+//            helper(res, n, currentS + '(', leftNum + 1, rightNum);
+//        }
+//        if(rightNum < leftNum) {
+//            helper(res, n, currentS + ')', leftNum, rightNum + 1);
+//        }
+//    }
+//
 //
 ////    public List<String> generateParenthesis(int n) {
 ////        List<String> res = new ArrayList<>();
