@@ -12,7 +12,7 @@
 //// 输入：head = [3,2,0,-4], pos = 1
 ////输出：tail connects to node index 1
 ////解释：链表中有一个环，其尾部连接到第二个节点。
-////                                                                            
+////
 ////
 ////
 ////
@@ -21,7 +21,7 @@
 //// 输入：head = [1,2], pos = 0
 ////输出：tail connects to node index 0
 ////解释：链表中有一个环，其尾部连接到第一个节点
-// //
+////
 ////
 ////
 ////
@@ -56,17 +56,22 @@
 // * }
 // * }
 // */
-//public class Solution {
+//class Solution {
 //
-////    class ListNode {
-////        int val;
-////        ListNode next;
-////
-////        ListNode(int x) {
-////            val = x;
-////            next = null;
-////        }
-////    }
+//    class ListNode {
+//        int val;
+//        ListNode next;
+//
+//        ListNode(int x) {
+//            val = x;
+//            next = null;
+//        }
+//    }
+//
+//    public ListNode detectCycle(ListNode head) {
+//
+//    }
+//
 //
 ////        public ListNode detectCycle(ListNode head) {
 ////            if(head == null) {
@@ -102,8 +107,6 @@
 ////        }
 //
 //
-//
-
 ////
 ////        public ListNode detectCycle(ListNode head) {
 ////
@@ -127,5 +130,5 @@
 ////            }
 ////            return head;
 ////        }
-//    }
+//}
 ////leetcode submit region end(Prohibit modification and deletion)

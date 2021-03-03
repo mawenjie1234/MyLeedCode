@@ -76,14 +76,31 @@
 //        ListNode fast = head.next;
 //        while (slow != fast) {
 //            slow = slow.next;
-//            if(fast == null || fast.next == null) {
+//            if(fast == null && fast.next == null) {
 //                return false;
 //            }
 //            fast = fast.next.next;
 //        }
-//
 //        return true;
 //    }
+//
+//
+////    public boolean hasCycle(ListNode head) {
+////        if(head == null) {
+////            return false;
+////        }
+////        ListNode slow = head;
+////        ListNode fast = head.next;
+////        while (slow != fast) {
+////            slow = slow.next;
+////            if(fast == null || fast.next == null) {
+////                return false;
+////            }
+////            fast = fast.next.next;
+////        }
+////
+////        return true;
+////    }
 //
 //
 //    //2
